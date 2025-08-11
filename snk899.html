@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Replica - Cửa Thép XNK 899</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Thư viện icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <!-- Thư viện slider (SwiperJS) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+        }
+        .text-orange-primary {
+            color: #f36f21;
+        }
+        .bg-orange-primary {
+            background-color: #f36f21;
+        }
+        .hover\:bg-orange-secondary:hover {
+            background-color: #e06017;
+        }
+        .group:hover .group-hover-text-orange {
+            color: #f36f21;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #f36f21;
+            margin: 8px auto 0;
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- HEADER -->
+    <header id="header" class="bg-white shadow-md sticky top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-2">
+                <!-- Logo -->
+                <a href="#" class="flex-shrink-0">
+                    <img src="https://placehold.co/180x60/ffffff/f36f21?text=XNK+899" alt="XNK 899 Logo" class="h-12 md:h-16">
+                </a>
+
+                <!-- Navigation -->
+                <nav class="hidden lg:flex items-center space-x-6">
+                    <a href="#" class="font-bold text-orange-primary uppercase tracking-wider">Trang chủ</a>
+                    <a href="#" class="font-semibold hover:text-orange-primary transition uppercase tracking-wider">Giới thiệu</a>
+                    <div class="group relative">
+                        <a href="#" class="font-semibold hover:text-orange-primary transition uppercase tracking-wider flex items-center">
+                            Sản phẩm <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
+                        </a>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2 w-60 py-2 z-20">
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Cửa thép vân gỗ</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Cửa thép chống cháy</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Cửa ABS Hàn Quốc</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Cửa gỗ công nghiệp</a>
+                        </div>
+                    </div>
+                    <a href="#" class="font-semibold hover:text-orange-primary transition uppercase tracking-wider">Báo giá</a>
+                    <a href="#" class="font-semibold hover:text-orange-primary transition uppercase tracking-wider">Dự án</a>
+                    <a href="#" class="font-semibold hover:text-orange-primary transition uppercase tracking-wider">Tin tức</a>
+                    <a href="#" class="font-semibold hover:text-orange-primary transition uppercase tracking-wider">Liên hệ</a>
+                </nav>
+
+                <!-- Hotline & Search -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <button class="text-gray-600 hover:text-orange-primary"><i class="fa-solid fa-magnifying-glass text-xl"></i></button>
+                    <a href="tel:0966899899" class="bg-orange-primary text-white px-4 py-2 rounded-full font-bold hover:bg-orange-secondary transition-colors flex items-center space-x-2">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <span>0966.899.899</span>
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="lg:hidden text-2xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white shadow-lg">
+            <a href="#" class="block py-3 px-4 font-semibold border-b">Trang chủ</a>
+            <a href="#" class="block py-3 px-4 font-semibold border-b">Giới thiệu</a>
+            <a href="#" class="block py-3 px-4 font-semibold border-b">Sản phẩm</a>
+            <a href="#" class="block py-3 px-4 font-semibold border-b">Báo giá</a>
+            <a href="#" class="block py-3 px-4 font-semibold border-b">Dự án</a>
+            <a href="#" class="block py-3 px-4 font-semibold border-b">Tin tức</a>
+            <a href="#" class="block py-3 px-4 font-semibold">Liên hệ</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. HERO SLIDER -->
+        <section class="swiper hero-slider h-[60vh] md:h-[85vh]">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide relative">
+                    <img src="https://placehold.co/1920x1080/555/eee?text=Hinh+Anh+Cong+Trinh+1" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/50"></div>
+                    <div class="absolute inset-0 flex items-center justify-center text-white text-center">
+                        <div class="container px-4">
+                            <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold uppercase tracking-wider leading-tight">Cửa Thép An Toàn XNK 899</h1>
+                            <p class="mt-4 max-w-2xl mx-auto text-base md:text-lg">Kiến tạo giá trị - Vững bước tương lai</p>
+                            <a href="#" class="mt-8 inline-block bg-orange-primary text-white px-8 py-3 rounded-md font-bold uppercase hover:bg-orange-secondary transition-colors">Xem chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide relative">
+                    <img src="https://placehold.co/1920x1080/666/eee?text=Hinh+Anh+Cong+Trinh+2" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/50"></div>
+                    <div class="absolute inset-0 flex items-center justify-center text-white text-center">
+                       <div class="container px-4">
+                            <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold uppercase tracking-wider leading-tight">Cửa Thép Vân Gỗ Cao Cấp</h1>
+                            <p class="mt-4 max-w-2xl mx-auto text-base md:text-lg">Vẻ đẹp sang trọng, bền bỉ cùng thời gian</p>
+                            <a href="#" class="mt-8 inline-block bg-orange-primary text-white px-8 py-3 rounded-md font-bold uppercase hover:bg-orange-secondary transition-colors">Xem chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next text-white"></div>
+            <div class="swiper-button-prev text-white"></div>
+        </section>
+
+        <!-- 2. ABOUT US -->
+        <section class="py-16 lg:py-24 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="relative">
+                        <div class="absolute -top-4 -left-4 w-full h-full border-4 border-orange-primary rounded-lg z-0"></div>
+                        <img src="https://placehold.co/600x700/ccc/333?text=Ve+Chung+Toi" alt="Về chúng tôi" class="relative z-10 w-full h-auto rounded-lg shadow-xl">
+                    </div>
+                    <div>
+                        <p class="text-orange-primary font-semibold uppercase tracking-widest">Về chúng tôi</p>
+                        <h2 class="text-3xl lg:text-4xl font-bold mt-2 mb-6">XNK 899 - Nhà Sản Xuất Cửa Thép Hàng Đầu Việt Nam</h2>
+                        <p class="text-gray-600 leading-relaxed">
+                            Công ty CP Sản xuất Thương mại XNK 899 là đơn vị tiên phong trong lĩnh vực sản xuất và phân phối các loại cửa thép vân gỗ, cửa thép chống cháy, cửa ABS Hàn Quốc... Với hệ thống nhà máy quy mô lớn, dây chuyền công nghệ hiện đại từ Châu Âu, chúng tôi cam kết mang đến những sản phẩm chất lượng vượt trội, thẩm mỹ tinh tế và an toàn tuyệt đối cho mọi công trình.
+                        </p>
+                        <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
+                            <div class="text-center">
+                                <div class="w-20 h-20 mx-auto rounded-full bg-orange-100 text-orange-primary flex items-center justify-center text-3xl"><i class="fa-solid fa-award"></i></div>
+                                <h4 class="font-bold mt-3 text-lg">Chất Lượng</h4>
+                            </div>
+                             <div class="text-center">
+                                <div class="w-20 h-20 mx-auto rounded-full bg-orange-100 text-orange-primary flex items-center justify-center text-3xl"><i class="fa-solid fa-palette"></i></div>
+                                <h4 class="font-bold mt-3 text-lg">Thẩm Mỹ</h4>
+                            </div>
+                             <div class="text-center">
+                                <div class="w-20 h-20 mx-auto rounded-full bg-orange-100 text-orange-primary flex items-center justify-center text-3xl"><i class="fa-solid fa-shield-halved"></i></div>
+                                <h4 class="font-bold mt-3 text-lg">An Toàn</h4>
+                            </div>
+                        </div>
+                        <a href="#" class="mt-10 inline-block bg-orange-primary text-white px-8 py-3 rounded-md font-bold uppercase hover:bg-orange-secondary transition-colors">Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. PRODUCTS -->
+        <section class="py-16 lg:py-24">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl lg:text-4xl font-bold uppercase section-title">Sản Phẩm Của Chúng Tôi</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Product Card -->
+                    <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center">
+                        <div class="overflow-hidden">
+                            <img src="https://placehold.co/400x300/dcb/333?text=Cua+Thep+Van+Go" alt="Cửa thép vân gỗ" class="w-full h-auto group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold group-hover-text-orange transition-colors">Cửa thép vân gỗ</h3>
+                        </div>
+                    </div>
+                     <!-- Product Card -->
+                    <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center">
+                        <div class="overflow-hidden">
+                            <img src="https://placehold.co/400x300/ddd/333?text=Cua+Thep+Chong+Chay" alt="Cửa thép chống cháy" class="w-full h-auto group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold group-hover-text-orange transition-colors">Cửa thép chống cháy</h3>
+                        </div>
+                    </div>
+                     <!-- Product Card -->
+                    <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center">
+                        <div class="overflow-hidden">
+                            <img src="https://placehold.co/400x300/cba/333?text=Cua+ABS+Han+Quoc" alt="Cửa ABS Hàn Quốc" class="w-full h-auto group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold group-hover-text-orange transition-colors">Cửa ABS Hàn Quốc</h3>
+                        </div>
+                    </div>
+                     <!-- Product Card -->
+                    <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center">
+                        <div class="overflow-hidden">
+                            <img src="https://placehold.co/400x300/abc/333?text=Cua+Go+Cong+Nghiep" alt="Cửa gỗ công nghiệp" class="w-full h-auto group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold group-hover-text-orange transition-colors">Cửa gỗ công nghiệp</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. WHY CHOOSE US -->
+        <section class="py-16 lg:py-24 bg-cover bg-center bg-fixed" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://placehold.co/1920x800/444/999?text=Background')">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl lg:text-4xl font-bold uppercase section-title text-white">Tại Sao Chọn XNK 899</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-white">
+                    <div class="text-center p-6">
+                        <div class="text-5xl text-orange-primary mb-4"><i class="fa-solid fa-industry"></i></div>
+                        <h3 class="text-xl font-bold mb-2">NHÀ MÁY HIỆN ĐẠI</h3>
+                        <p class="text-gray-300">Dây chuyền công nghệ tiên tiến, tự động hóa cao.</p>
+                    </div>
+                    <div class="text-center p-6">
+                        <div class="text-5xl text-orange-primary mb-4"><i class="fa-solid fa-award"></i></div>
+                        <h3 class="text-xl font-bold mb-2">SẢN PHẨM CHẤT LƯỢNG</h3>
+                        <p class="text-gray-300">Đạt tiêu chuẩn quốc tế, độ bền vượt trội.</p>
+                    </div>
+                    <div class="text-center p-6">
+                        <div class="text-5xl text-orange-primary mb-4"><i class="fa-solid fa-users-gear"></i></div>
+                        <h3 class="text-xl font-bold mb-2">ĐỘI NGŨ CHUYÊN NGHIỆP</h3>
+                        <p class="text-gray-300">Kỹ sư, công nhân tay nghề cao, tận tâm.</p>
+                    </div>
+                    <div class="text-center p-6">
+                        <div class="text-5xl text-orange-primary mb-4"><i class="fa-solid fa-handshake-angle"></i></div>
+                        <h3 class="text-xl font-bold mb-2">DỊCH VỤ TẬN TÂM</h3>
+                        <p class="text-gray-300">Tư vấn, thi công, bảo hành trọn gói.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. PROJECTS -->
+        <section class="py-16 lg:py-24">
+            <div class="container mx-auto px-4">
+                 <div class="text-center mb-12">
+                    <h2 class="text-3xl lg:text-4xl font-bold uppercase section-title">Dự Án Tiêu Biểu</h2>
+                </div>
+                <div class="swiper project-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide group relative overflow-hidden rounded-lg">
+                            <img src="https://placehold.co/500x400/ccc/333?text=Du+An+Starlake" class="w-full h-auto">
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition-all duration-300 flex items-end">
+                                <h3 class="text-white text-xl font-bold p-4 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300">Khu đô thị Starlake</h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide group relative overflow-hidden rounded-lg">
+                            <img src="https://placehold.co/500x400/bbb/333?text=Du+An+Vinfast" class="w-full h-auto">
+                             <div class="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition-all duration-300 flex items-end">
+                                <h3 class="text-white text-xl font-bold p-4 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300">Nhà máy Vinfast Hải Phòng</h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide group relative overflow-hidden rounded-lg">
+                            <img src="https://placehold.co/500x400/aaa/333?text=Du+An+The+Zei" class="w-full h-auto">
+                             <div class="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition-all duration-300 flex items-end">
+                                <h3 class="text-white text-xl font-bold p-4 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300">Tòa nhà The Zei Mỹ Đình</h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide group relative overflow-hidden rounded-lg">
+                            <img src="https://placehold.co/500x400/999/333?text=Du+An+Goldmark" class="w-full h-auto">
+                             <div class="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition-all duration-300 flex items-end">
+                                <h3 class="text-white text-xl font-bold p-4 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300">Goldmark City</h3>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="swiper-pagination mt-8 relative"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. NEWS -->
+        <section class="py-16 lg:py-24 bg-gray-50">
+            <div class="container mx-auto px-4">
+                 <div class="text-center mb-12">
+                    <h2 class="text-3xl lg:text-4xl font-bold uppercase section-title">Tin Tức & Sự Kiện</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- News Card -->
+                    <div class="group bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img src="https://placehold.co/400x250/eee/333?text=Tin+Tuc+1" class="w-full h-auto group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <p class="text-sm text-gray-500 mb-2"><i class="fa-regular fa-calendar-alt mr-1"></i> 11/08/2025</p>
+                            <h3 class="text-lg font-bold mb-2 h-14 overflow-hidden"><a href="#" class="group-hover-text-orange transition-colors">Báo giá cửa thép vân gỗ mới nhất tại XNK 899</a></h3>
+                            <a href="#" class="font-semibold text-orange-primary hover:underline">Đọc thêm <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                        </div>
+                    </div>
+                    <!-- News Card -->
+                     <div class="group bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img src="https://placehold.co/400x250/ddd/333?text=Tin+Tuc+2" class="w-full h-auto group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <p class="text-sm text-gray-500 mb-2"><i class="fa-regular fa-calendar-alt mr-1"></i> 08/08/2025</p>
+                            <h3 class="text-lg font-bold mb-2 h-14 overflow-hidden"><a href="#" class="group-hover-text-orange transition-colors">Phân biệt cửa thép chống cháy và cửa thép an toàn thông thường</a></h3>
+                            <a href="#" class="font-semibold text-orange-primary hover:underline">Đọc thêm <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                        </div>
+                    </div>
+                    <!-- News Card -->
+                     <div class="group bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img src="https://placehold.co/400x250/ccc/333?text=Tin+Tuc+3" class="w-full h-auto group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <p class="text-sm text-gray-500 mb-2"><i class="fa-regular fa-calendar-alt mr-1"></i> 02/08/2025</p>
+                            <h3 class="text-lg font-bold mb-2 h-14 overflow-hidden"><a href="#" class="group-hover-text-orange transition-colors">XNK 899 hoàn thành bàn giao dự án Starlake Tây Hồ Tây</a></h3>
+                            <a href="#" class="font-semibold text-orange-primary hover:underline">Đọc thêm <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-800 text-gray-300">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <!-- Column 1: Company Info -->
+                <div>
+                    <img src="https://placehold.co/180x60/374151/f36f21?text=XNK+899" alt="XNK 899 Logo" class="h-12 mb-4">
+                    <h4 class="font-bold text-white mb-2 uppercase">CÔNG TY CP SẢN XUẤT THƯƠNG MẠI XNK 899</h4>
+                    <p class="text-sm leading-relaxed"><i class="fa-solid fa-location-dot w-4 mr-2"></i>Địa chỉ: Lô A2, Cụm Công Nghiệp vừa và nhỏ Từ Liêm, P. Minh Khai, Q. Bắc Từ Liêm, Hà Nội</p>
+                    <p class="text-sm mt-2"><i class="fa-solid fa-phone w-4 mr-2"></i>Hotline: 0966.899.899</p>
+                    <p class="text-sm mt-2"><i class="fa-solid fa-envelope w-4 mr-2"></i>Email: xnk899.com@gmail.com</p>
+                </div>
+                <!-- Column 2: About Us Links -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">VỀ CHÚNG TÔI</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-orange-primary transition-colors">Giới thiệu</a></li>
+                        <li><a href="#" class="hover:text-orange-primary transition-colors">Năng lực sản xuất</a></li>
+                        <li><a href="#" class="hover:text-orange-primary transition-colors">Hồ sơ năng lực</a></li>
+                        <li><a href="#" class="hover:text-orange-primary transition-colors">Tuyển dụng</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3: Policies -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">CHÍNH SÁCH</h4>
+                     <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-orange-primary transition-colors">Chính sách bảo hành</a></li>
+                        <li><a href="#" class="hover:text-orange-primary transition-colors">Chính sách vận chuyển</a></li>
+                        <li><a href="#" class="hover:text-orange-primary transition-colors">Chính sách thanh toán</a></li>
+                        <li><a href="#" class="hover:text-orange-primary transition-colors">Chính sách bảo mật</a></li>
+                    </ul>
+                </div>
+                <!-- Column 4: Facebook -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">FANPAGE</h4>
+                    <div class="bg-gray-700 w-full h-32 rounded-md flex items-center justify-center">
+                        <p class="text-sm">Facebook Page Plugin</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-black/20 py-4">
+            <div class="container mx-auto px-4 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Bản quyền thuộc về Công ty CP SX TM XNK 899</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Mobile Menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Hero Slider
+        const heroSlider = new Swiper('.hero-slider', {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        // Project Slider
+        const projectSlider = new Swiper('.project-slider', {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+            }
+        });
+    </script>
+
+</body>
+</html>
