@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo Replica - Cửa Thép XNK 899</title>
+    <title>Demo Website Hoàn Chỉnh - XNK 899</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,6 +28,9 @@
         .hover\:bg-orange-secondary:hover {
             background-color: #e06017;
         }
+        .border-orange-primary {
+            border-color: #f36f21;
+        }
         .group:hover .group-hover-text-orange {
             color: #f36f21;
         }
@@ -39,6 +42,41 @@
             background-color: #f36f21;
             margin: 8px auto 0;
         }
+        /* Styles for page navigation */
+        .page-content {
+            display: none;
+        }
+        .page-content.active {
+            display: block;
+        }
+        /* Styles for active nav links */
+        .main-nav-link.active {
+            color: #f36f21;
+            font-weight: 700;
+        }
+        .sidebar-link.active {
+            background-color: #f36f21;
+            color: white;
+            border-right: 4px solid #c25413;
+        }
+        .ux-shape-divider--top {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+        }
+        .ux-shape-divider--top svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 50px;
+        }
+        .ux-shape-fill {
+            fill: #FFFFFF;
+        }
     </style>
 </head>
 <body class="bg-white">
@@ -48,26 +86,37 @@
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-2">
                 <!-- Logo -->
-                <a href="#" class="flex-shrink-0">
-                    <img src="https://placehold.co/180x60/ffffff/f36f21?text=XNK+899" alt="XNK 899 Logo" class="h-12 md:h-16">
+                <a href="#homepage" class="main-nav-link flex-shrink-0">
+                    <img src="https://i.imgur.com/8J5tB6V.png" alt="XNK 899 Logo" class="h-12 md:h-16">
                 </a>
 
                 <!-- Navigation -->
-                <nav class="hidden lg:flex items-center space-x-6">
-                    <a href="#" class="font-bold text-orange-primary uppercase tracking-wider">Trang chủ</a>
-                    <a href="#" class="font-semibold hover:text-orange-primary transition uppercase tracking-wider">Giới thiệu</a>
+                <nav id="main-nav" class="hidden lg:flex items-center space-x-6">
+                    <a href="#homepage" class="main-nav-link active uppercase tracking-wider">Trang chủ</a>
+                    
+                    <!-- Giới thiệu Dropdown -->
+                    <div class="group relative">
+                        <a href="#gioithieu-page" class="main-nav-link font-semibold hover:text-orange-primary transition uppercase tracking-wider flex items-center">
+                            Giới thiệu <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
+                        </a>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2 w-60 py-2 z-20">
+                            <a href="#gioithieu-page" class="main-nav-link block px-4 py-2 hover:bg-gray-100">Thư ngỏ</a>
+                            <a href="#hosonangluc-page" class="main-nav-link block px-4 py-2 hover:bg-gray-100">Hồ sơ năng lực</a>
+                            <a href="#cosovatchat-page" class="main-nav-link block px-4 py-2 hover:bg-gray-100">Cơ sở vật chất</a>
+                            <a href="#chinhsachchatluong-page" class="main-nav-link block px-4 py-2 hover:bg-gray-100">Chính sách chất lượng</a>
+                            <a href="#chinhsachbaomat-page" class="main-nav-link block px-4 py-2 hover:bg-gray-100">Chính Sách Bảo Mật</a>
+                        </div>
+                    </div>
+                    
                     <div class="group relative">
                         <a href="#" class="font-semibold hover:text-orange-primary transition uppercase tracking-wider flex items-center">
                             Sản phẩm <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
                         </a>
                         <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2 w-60 py-2 z-20">
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Cửa thép vân gỗ</a>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Cửa thép chống cháy</a>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Cửa ABS Hàn Quốc</a>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Cửa gỗ công nghiệp</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Rèm/Màn cuốn ngăn cháy</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Kính ngăn cháy</a>
                         </div>
                     </div>
-                    <a href="#" class="font-semibold hover:text-orange-primary transition uppercase tracking-wider">Báo giá</a>
                     <a href="#" class="font-semibold hover:text-orange-primary transition uppercase tracking-wider">Dự án</a>
                     <a href="#" class="font-semibold hover:text-orange-primary transition uppercase tracking-wider">Tin tức</a>
                     <a href="#" class="font-semibold hover:text-orange-primary transition uppercase tracking-wider">Liên hệ</a>
@@ -75,10 +124,9 @@
 
                 <!-- Hotline & Search -->
                 <div class="hidden md:flex items-center space-x-4">
-                    <button class="text-gray-600 hover:text-orange-primary"><i class="fa-solid fa-magnifying-glass text-xl"></i></button>
-                    <a href="tel:0966899899" class="bg-orange-primary text-white px-4 py-2 rounded-full font-bold hover:bg-orange-secondary transition-colors flex items-center space-x-2">
+                    <a href="tel:0987811158" class="bg-orange-primary text-white px-4 py-2 rounded-full font-bold hover:bg-orange-secondary transition-colors flex items-center space-x-2">
                         <i class="fa-solid fa-phone-volume"></i>
-                        <span>0966.899.899</span>
+                        <span>0987.811.158</span>
                     </a>
                 </div>
                 
@@ -89,244 +137,334 @@
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white shadow-lg">
-            <a href="#" class="block py-3 px-4 font-semibold border-b">Trang chủ</a>
-            <a href="#" class="block py-3 px-4 font-semibold border-b">Giới thiệu</a>
-            <a href="#" class="block py-3 px-4 font-semibold border-b">Sản phẩm</a>
-            <a href="#" class="block py-3 px-4 font-semibold border-b">Báo giá</a>
-            <a href="#" class="block py-3 px-4 font-semibold border-b">Dự án</a>
-            <a href="#" class="block py-3 px-4 font-semibold border-b">Tin tức</a>
-            <a href="#" class="block py-3 px-4 font-semibold">Liên hệ</a>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white shadow-lg border-t">
+            <nav class="flex flex-col">
+                <a href="#homepage" class="main-nav-link block py-3 px-4 font-semibold border-b hover:bg-gray-50">Trang chủ</a>
+                <a href="#gioithieu-page" class="main-nav-link block py-3 px-4 font-semibold border-b hover:bg-gray-50">Giới thiệu</a>
+                <a href="#" class="block py-3 px-4 font-semibold border-b hover:bg-gray-50">Sản phẩm</a>
+                <a href="#" class="block py-3 px-4 font-semibold border-b hover:bg-gray-50">Dự án</a>
+                <a href="#" class="block py-3 px-4 font-semibold border-b hover:bg-gray-50">Tin tức</a>
+                <a href="#" class="block py-3 px-4 font-semibold hover:bg-gray-50">Liên hệ</a>
+            </nav>
         </div>
     </header>
 
     <main>
-        <!-- 1. HERO SLIDER -->
-        <section class="swiper hero-slider h-[60vh] md:h-[85vh]">
-            <div class="swiper-wrapper">
-                <!-- Slide 1 -->
-                <div class="swiper-slide relative">
-                    <img src="https://placehold.co/1920x1080/555/eee?text=Hinh+Anh+Cong+Trinh+1" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black/50"></div>
-                    <div class="absolute inset-0 flex items-center justify-center text-white text-center">
-                        <div class="container px-4">
-                            <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold uppercase tracking-wider leading-tight">Cửa Thép An Toàn XNK 899</h1>
-                            <p class="mt-4 max-w-2xl mx-auto text-base md:text-lg">Kiến tạo giá trị - Vững bước tương lai</p>
-                            <a href="#" class="mt-8 inline-block bg-orange-primary text-white px-8 py-3 rounded-md font-bold uppercase hover:bg-orange-secondary transition-colors">Xem chi tiết</a>
-                        </div>
+        <!-- =================================================================== -->
+        <!-- ======================= HOMEPAGE CONTENT ========================== -->
+        <!-- =================================================================== -->
+        <div id="homepage" class="page-content active">
+            <!-- 1. HERO SLIDER -->
+            <section class="swiper hero-slider h-[60vh] md:h-[85vh]">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide relative"><img src="https://xnk899.com/files/tin/42/jpg/thu-nghiem-kha-nang-chiu-lua-cua-rem/-man-ngan-chay-90-phut.jpg" class="w-full h-full object-cover"></div>
+                    <div class="swiper-slide relative"><img src="https://xnk899.com/files/tin/41/jpg/thu-nghiem-kha-nang-chiu-lua-cua-man/-rem-ngan-chay-60-phut.jpg" class="w-full h-full object-cover"></div>
+                </div>
+                 <div class="absolute inset-0 bg-black/50"></div>
+                <div class="absolute inset-0 flex items-center justify-center text-white text-center">
+                    <div class="container px-4">
+                        <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold uppercase tracking-wider leading-tight">ĐỘT PHÁ CÔNG NGHỆ - KIẾN TẠO TƯƠNG LAI</h1>
+                        <p class="mt-4 max-w-2xl mx-auto text-base md:text-lg">Đơn vị tiên phong trong lĩnh vực các vật liệu ngăn cháy với công nghệ mới nhất, hiện đại nhất.</p>
+                        <a href="#gioithieu-page" class="main-nav-link mt-8 inline-block bg-orange-primary text-white px-8 py-3 rounded-md font-bold uppercase hover:bg-orange-secondary transition-colors">Về chúng tôi</a>
                     </div>
                 </div>
-                <!-- Slide 2 -->
-                <div class="swiper-slide relative">
-                    <img src="https://placehold.co/1920x1080/666/eee?text=Hinh+Anh+Cong+Trinh+2" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black/50"></div>
-                    <div class="absolute inset-0 flex items-center justify-center text-white text-center">
-                       <div class="container px-4">
-                            <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold uppercase tracking-wider leading-tight">Cửa Thép Vân Gỗ Cao Cấp</h1>
-                            <p class="mt-4 max-w-2xl mx-auto text-base md:text-lg">Vẻ đẹp sang trọng, bền bỉ cùng thời gian</p>
-                            <a href="#" class="mt-8 inline-block bg-orange-primary text-white px-8 py-3 rounded-md font-bold uppercase hover:bg-orange-secondary transition-colors">Xem chi tiết</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-button-next text-white"></div>
-            <div class="swiper-button-prev text-white"></div>
-        </section>
+                <div class="swiper-button-next text-white"></div>
+                <div class="swiper-button-prev text-white"></div>
+            </section>
 
-        <!-- 2. ABOUT US -->
-        <section class="py-16 lg:py-24 bg-gray-50">
-            <div class="container mx-auto px-4">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div class="relative">
-                        <div class="absolute -top-4 -left-4 w-full h-full border-4 border-orange-primary rounded-lg z-0"></div>
-                        <img src="https://placehold.co/600x700/ccc/333?text=Ve+Chung+Toi" alt="Về chúng tôi" class="relative z-10 w-full h-auto rounded-lg shadow-xl">
-                    </div>
-                    <div>
-                        <p class="text-orange-primary font-semibold uppercase tracking-widest">Về chúng tôi</p>
-                        <h2 class="text-3xl lg:text-4xl font-bold mt-2 mb-6">XNK 899 - Nhà Sản Xuất Cửa Thép Hàng Đầu Việt Nam</h2>
-                        <p class="text-gray-600 leading-relaxed">
-                            Công ty CP Sản xuất Thương mại XNK 899 là đơn vị tiên phong trong lĩnh vực sản xuất và phân phối các loại cửa thép vân gỗ, cửa thép chống cháy, cửa ABS Hàn Quốc... Với hệ thống nhà máy quy mô lớn, dây chuyền công nghệ hiện đại từ Châu Âu, chúng tôi cam kết mang đến những sản phẩm chất lượng vượt trội, thẩm mỹ tinh tế và an toàn tuyệt đối cho mọi công trình.
-                        </p>
-                        <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
-                            <div class="text-center">
-                                <div class="w-20 h-20 mx-auto rounded-full bg-orange-100 text-orange-primary flex items-center justify-center text-3xl"><i class="fa-solid fa-award"></i></div>
-                                <h4 class="font-bold mt-3 text-lg">Chất Lượng</h4>
-                            </div>
-                             <div class="text-center">
-                                <div class="w-20 h-20 mx-auto rounded-full bg-orange-100 text-orange-primary flex items-center justify-center text-3xl"><i class="fa-solid fa-palette"></i></div>
-                                <h4 class="font-bold mt-3 text-lg">Thẩm Mỹ</h4>
-                            </div>
-                             <div class="text-center">
-                                <div class="w-20 h-20 mx-auto rounded-full bg-orange-100 text-orange-primary flex items-center justify-center text-3xl"><i class="fa-solid fa-shield-halved"></i></div>
-                                <h4 class="font-bold mt-3 text-lg">An Toàn</h4>
-                            </div>
+            <!-- 2. ABOUT US -->
+            <section class="py-16 lg:py-24 bg-gray-50">
+                <div class="container mx-auto px-4">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div class="relative">
+                            <div class="absolute -top-4 -left-4 w-full h-full border-4 border-orange-primary rounded-lg z-0"></div>
+                            <img src="./cong ty xsn 899.jpg" alt="Về chúng tôi" class="relative z-10 w-full h-auto rounded-lg shadow-xl object-cover">
                         </div>
-                        <a href="#" class="mt-10 inline-block bg-orange-primary text-white px-8 py-3 rounded-md font-bold uppercase hover:bg-orange-secondary transition-colors">Xem thêm</a>
+                        <div>
+                            <p class="text-orange-primary font-semibold uppercase tracking-widest">Thư ngỏ</p>
+                            <h2 class="text-3xl lg:text-4xl font-bold mt-2 mb-6">Công ty CP XNK và Xây Dựng 899</h2>
+                            <p class="text-gray-600 leading-relaxed">
+                                Với kinh nghiệm chuyên sâu về các sản phẩm PCCC, Công ty XNK 899 phủ sóng toàn quốc các mặt hàng: Rèm/ Màn ngăn cháy, kính ngăn cháy, khung thép ngăn cháy, và các sản phẩm ngăn cháy khác. Tất cả sản phẩm đều được nhập khẩu chính ngạch, có nguồn gốc, xuất xứ rõ ràng, chất lượng đảm bảo theo tiêu chuẩn PCCC, vừa an toàn vừa có tính thẩm mỹ cao.
+                            </p>
+                            <a href="#gioithieu-page" class="main-nav-link mt-10 inline-block bg-orange-primary text-white px-8 py-3 rounded-md font-bold uppercase hover:bg-orange-secondary transition-colors">Xem thêm</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- 3. PRODUCTS -->
-        <section class="py-16 lg:py-24">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl lg:text-4xl font-bold uppercase section-title">Sản Phẩm Của Chúng Tôi</h2>
+            <!-- 3. FEATURED PRODUCTS -->
+            <section class="py-16 lg:py-24 bg-gray-100 relative">
+                <div class="ux-shape-divider--top">
+                    <svg viewBox="0 0 1000 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                        <path class="ux-shape-fill" d="M1000 100H0L0 96H480.929C482.255 96 483.527 95.4732 484.464 94.5355L497.879 81.1213C499.05 79.9497 500.95 79.9497 502.121 81.1213L515.536 94.5355C516.473 95.4732 517.745 96 519.071 96H1000V100Z"></path>
+                    </svg>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Product Card -->
-                    <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center">
-                        <div class="overflow-hidden">
-                            <img src="https://placehold.co/400x300/dcb/333?text=Cua+Thep+Van+Go" alt="Cửa thép vân gỗ" class="w-full h-auto group-hover:scale-110 transition-transform duration-500">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold group-hover-text-orange transition-colors">Cửa thép vân gỗ</h3>
-                        </div>
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl lg:text-4xl font-bold uppercase section-title" style="color: #26376b;">Sản phẩm Rèm/Màn cuốn ngăn cháy</h2>
                     </div>
-                     <!-- Product Card -->
-                    <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center">
-                        <div class="overflow-hidden">
-                            <img src="https://placehold.co/400x300/ddd/333?text=Cua+Thep+Chong+Chay" alt="Cửa thép chống cháy" class="w-full h-auto group-hover:scale-110 transition-transform duration-500">
+                    <div class="swiper featured-product-slider">
+                        <div class="swiper-wrapper py-4">
+                            <div class="swiper-slide h-auto"><div class="group bg-white rounded-lg shadow-md overflow-hidden text-center flex flex-col h-full"><div class="overflow-hidden"><img src="./ie 60phut.jpg"></div><div class="p-4 flex flex-col flex-grow"><h3 class="text-base font-bold flex-grow">Rèm ngăn cháy EI 60 phút</h3></div></div></div>
+                            <div class="swiper-slide h-auto"><div class="group bg-white rounded-lg shadow-md overflow-hidden text-center flex flex-col h-full"><div class="overflow-hidden"><img src="./ie 90phut.jpg" class="w-full h-48 object-cover"></div><div class="p-4 flex flex-col flex-grow"><h3 class="text-base font-bold flex-grow">Rèm ngăn cháy EI 90 phút</h3></div></div></div>
+                            <div class="swiper-slide h-auto"><div class="group bg-white rounded-lg shadow-md overflow-hidden text-center flex flex-col h-full"><div class="overflow-hidden"><img src="./thi cong rem ngan chay.jpg" class="w-full h-48 object-cover"></div><div class="p-4 flex flex-col flex-grow"><h3 class="text-base font-bold flex-grow">Thi công rèm ngăn cháy</h3></div></div></div>
+                            <div class="swiper-slide h-auto"><div class="group bg-white rounded-lg shadow-md overflow-hidden text-center flex flex-col h-full"><div class="overflow-hidden"><img src="./thi cong rem ngan chay.jpg" class="w-full h-48 object-cover"></div><div class="p-4 flex flex-col flex-grow"><h3 class="text-base font-bold flex-grow">Rèm ngăn cháy cho nhà xưởng</h3></div></div></div>
+                            <div class="swiper-slide h-auto"><div class="group bg-white rounded-lg shadow-md overflow-hidden text-center flex flex-col h-full"><div class="overflow-hidden"><img src="./tang ham.jpg" class="w-full h-48 object-cover"></div><div class="p-4 flex flex-col flex-grow"><h3 class="text-base font-bold flex-grow">Rèm ngăn cháy cho tầng hầm</h3></div></div></div>
                         </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold group-hover-text-orange transition-colors">Cửa thép chống cháy</h3>
-                        </div>
-                    </div>
-                     <!-- Product Card -->
-                    <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center">
-                        <div class="overflow-hidden">
-                            <img src="https://placehold.co/400x300/cba/333?text=Cua+ABS+Han+Quoc" alt="Cửa ABS Hàn Quốc" class="w-full h-auto group-hover:scale-110 transition-transform duration-500">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold group-hover-text-orange transition-colors">Cửa ABS Hàn Quốc</h3>
-                        </div>
-                    </div>
-                     <!-- Product Card -->
-                    <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center">
-                        <div class="overflow-hidden">
-                            <img src="https://placehold.co/400x300/abc/333?text=Cua+Go+Cong+Nghiep" alt="Cửa gỗ công nghiệp" class="w-full h-auto group-hover:scale-110 transition-transform duration-500">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold group-hover-text-orange transition-colors">Cửa gỗ công nghiệp</h3>
-                        </div>
+                        <div class="swiper-button-next text-gray-600"></div>
+                        <div class="swiper-button-prev text-gray-600"></div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- 4. WHY CHOOSE US -->
-        <section class="py-16 lg:py-24 bg-cover bg-center bg-fixed" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://placehold.co/1920x800/444/999?text=Background')">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl lg:text-4xl font-bold uppercase section-title text-white">Tại Sao Chọn XNK 899</h2>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-white">
-                    <div class="text-center p-6">
-                        <div class="text-5xl text-orange-primary mb-4"><i class="fa-solid fa-industry"></i></div>
-                        <h3 class="text-xl font-bold mb-2">NHÀ MÁY HIỆN ĐẠI</h3>
-                        <p class="text-gray-300">Dây chuyền công nghệ tiên tiến, tự động hóa cao.</p>
+            <!-- 4. PROJECTS -->
+            <section class="py-16 lg:py-24">
+                <div class="container mx-auto px-4">
+                     <div class="text-center mb-12">
+                        <h2 class="text-3xl lg:text-4xl font-bold uppercase section-title">Dự Án Tiêu Biểu</h2>
                     </div>
-                    <div class="text-center p-6">
-                        <div class="text-5xl text-orange-primary mb-4"><i class="fa-solid fa-award"></i></div>
-                        <h3 class="text-xl font-bold mb-2">SẢN PHẨM CHẤT LƯỢNG</h3>
-                        <p class="text-gray-300">Đạt tiêu chuẩn quốc tế, độ bền vượt trội.</p>
-                    </div>
-                    <div class="text-center p-6">
-                        <div class="text-5xl text-orange-primary mb-4"><i class="fa-solid fa-users-gear"></i></div>
-                        <h3 class="text-xl font-bold mb-2">ĐỘI NGŨ CHUYÊN NGHIỆP</h3>
-                        <p class="text-gray-300">Kỹ sư, công nhân tay nghề cao, tận tâm.</p>
-                    </div>
-                    <div class="text-center p-6">
-                        <div class="text-5xl text-orange-primary mb-4"><i class="fa-solid fa-handshake-angle"></i></div>
-                        <h3 class="text-xl font-bold mb-2">DỊCH VỤ TẬN TÂM</h3>
-                        <p class="text-gray-300">Tư vấn, thi công, bảo hành trọn gói.</p>
+                    <div class="swiper project-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide group relative overflow-hidden rounded-lg"><img src="./phu son.jpg" class="w-full h-full object-cover"><div class="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition-all duration-300 flex items-end"><h3 class="text-white text-xl font-bold p-4">Nhà máy xử lý rác thải Phú Sơn</h3></div></div>
+                            <div class="swiper-slide group relative overflow-hidden rounded-lg"><img src="./giao thong van tai.jpg" class="w-full h-full object-cover"><div class="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition-all duration-300 flex items-end"><h3 class="text-white text-xl font-bold p-4">Trường ĐH Giao thông vận tải</h3></div></div>
+                            <div class="swiper-slide group relative overflow-hidden rounded-lg"><img src="./marriot.jpg" class="w-full h-full object-cover"><div class="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition-all duration-300 flex items-end"><h3 class="text-white text-xl font-bold p-4">Khách sạn Marriot Đà Nẵng</h3></div></div>
+                            <div class="swiper-slide group relative overflow-hidden rounded-lg"><img src="./muramato.jpg" class="w-full h-full object-cover"><div class="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition-all duration-300 flex items-end"><h3 class="text-white text-xl font-bold p-4">Nhà máy Keinhing Muramato VN</h3></div></div>
+                        </div>
+                         <div class="swiper-pagination mt-8 relative"></div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
-        <!-- 5. PROJECTS -->
-        <section class="py-16 lg:py-24">
-            <div class="container mx-auto px-4">
-                 <div class="text-center mb-12">
-                    <h2 class="text-3xl lg:text-4xl font-bold uppercase section-title">Dự Án Tiêu Biểu</h2>
+        <!-- =================================================================== -->
+        <!-- ======================= ABOUT PAGE (GIỚI THIỆU CHUNG) ======================== -->
+        <!-- =================================================================== -->
+        <div id="gioithieu-page" class="page-content">
+            <section class="relative bg-gray-800 text-white py-20">
+                <img src="./cong ty xsn 899.jpg" class="absolute inset-0 w-full h-full object-cover opacity-30">
+                <div class="container mx-auto px-4 relative z-10 text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold uppercase">Thư ngỏ</h1>
+                    <div class="mt-4 text-sm">
+                        <a href="#homepage" class="main-nav-link hover:text-orange-primary">Trang chủ</a><span class="mx-2">/</span><span>Giới thiệu</span>
+                    </div>
                 </div>
-                <div class="swiper project-slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide group relative overflow-hidden rounded-lg">
-                            <img src="https://placehold.co/500x400/ccc/333?text=Du+An+Starlake" class="w-full h-auto">
-                            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition-all duration-300 flex items-end">
-                                <h3 class="text-white text-xl font-bold p-4 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300">Khu đô thị Starlake</h3>
+            </section>
+            <section class="py-16 lg:py-20 bg-gray-50">
+                <div class="container mx-auto px-4">
+                    <div class="grid lg:grid-cols-4 gap-8 lg:gap-12">
+                        <aside class="lg:col-span-1">
+                            <div class="bg-white rounded-lg shadow-md p-4 sticky top-28">
+                                <h3 class="text-xl font-bold mb-4 pb-2 border-b-2 border-orange-primary">Về Chúng Tôi</h3>
+                                <ul class="space-y-1">
+                                    <li><a href="#gioithieu-page" class="main-nav-link sidebar-link active block w-full text-left px-4 py-3 rounded-md font-semibold">Thư ngỏ</a></li>
+                                    <li><a href="#hosonangluc-page" class="main-nav-link sidebar-link block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-orange-primary hover:text-white">Hồ sơ năng lực</a></li>
+                                    <li><a href="#cosovatchat-page" class="main-nav-link sidebar-link block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-orange-primary hover:text-white">Cơ sở vật chất</a></li>
+                                    <li><a href="#chinhsachchatluong-page" class="main-nav-link sidebar-link block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-orange-primary hover:text-white">Chính sách chất lượng</a></li>
+                                    <li><a href="#chinhsachbaomat-page" class="main-nav-link sidebar-link block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-orange-primary hover:text-white">Chính sách bảo mật</a></li>
+                                </ul>
+                            </div>
+                        </aside>
+                        <div class="lg:col-span-3 bg-white rounded-lg shadow-md p-6 md:p-8">
+                            <h2 class="text-3xl font-bold text-gray-800 mb-6 pb-3 border-b">Thư Ngỏ</h2>
+                            <p class="text-gray-600 leading-relaxed mb-4">Kính gửi: Quý khách hàng!</p>
+                            <p class="text-gray-600 leading-relaxed mb-4">Công ty cổ phần xuất nhập khẩu và xây dựng 899 xin gửi tới Quý khách hàng lời chào trân trọng nhất!</p>
+                            <p class="text-gray-600 leading-relaxed mb-4">Hiện nay, tình trạng các tòa nhà văn phòng, nhà ở, hay khu vui chơi, giải trí hay xảy ra tai nạn về hỏa hoạn. Vì vậy việc xây dựng các hệ thống, thiết bị, vật tư đảm bảo phòng cháy chữa cháy là việc làm tất yếu.</p>
+                            <p class="text-gray-600 leading-relaxed mb-4">Với kinh nghiệm chuyên sâu về các sản phẩm PCCC, Công ty xuất nhập khẩu 899 phủ sóng toàn quốc các mặt hàng: Rèm/ Màn ngăn cháy, kính ngăn cháy hệ E, EI, khung thép ngăn cháy, ống nhựa C-PVC ngăn cháy, tấm panel ngăn cháy và các sản phẩm ngăn cháy khác.</p>
+                            <p class="text-gray-600 leading-relaxed mb-4">Tất cả các sản phẩm mà Công ty 899 cung cấp đều được nhập khẩu chính ngạch, có nguồn gốc, xuất xứ rõ ràng, chất lượng đảm bảo theo tiêu chuẩn phòng cháy chữa cháy. Ngoài ra, không chỉ đảm bảo tính an toàn cho công trình, các sản phẩm chúng tôi mang đến còn có tính thẩm mỹ cao, giúp cho không gian ngôi nhà, văn phòng,.....của quý vị trở nên hiện đại, sang trọng.</p>
+                            <p class="text-gray-600 leading-relaxed mb-4"><strong>“ĐỘT PHÁ CÔNG NGHỆ - KIẾN TẠO TƯƠNG LAI":</strong> chính là Phương châm làm việc của Công ty 899. Chúng tôi luôn là đơn vị tiên phong trong lĩnh vực các vật liệu ngăn cháy với công nghệ mới nhất, hiện đại nhất.</p>
+                            <p class="text-gray-600 leading-relaxed mb-4">Chúng tôi rất mong được tiếp tục đồng hành cùng Quý khách hàng trong những chặng đường xa hơn và lớn mạnh hơn.</p>
+                            <p class="text-gray-600 leading-relaxed">Xin trân trọng cảm ơn!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- =================================================================== -->
+        <!-- ======================= HỒ SƠ NĂNG LỰC PAGE ======================= -->
+        <!-- =================================================================== -->
+        <div id="hosonangluc-page" class="page-content">
+            <section class="relative bg-gray-800 text-white py-20">
+                <img src="https://xnk899.com/files/tin/41/jpg/thu-nghiem-kha-nang-chiu-lua-cua-man/-rem-ngan-chay-60-phut.jpg" class="absolute inset-0 w-full h-full object-cover opacity-30">
+                <div class="container mx-auto px-4 relative z-10 text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold uppercase">Hồ Sơ Năng Lực</h1>
+                    <div class="mt-4 text-sm">
+                        <a href="#homepage" class="main-nav-link hover:text-orange-primary">Trang chủ</a><span class="mx-2">/</span><span>Hồ sơ năng lực</span>
+                    </div>
+                </div>
+            </section>
+            <section class="py-16 lg:py-20 bg-gray-50">
+                <div class="container mx-auto px-4">
+                    <div class="grid lg:grid-cols-4 gap-8 lg:gap-12">
+                        <aside class="lg:col-span-1">
+                            <div class="bg-white rounded-lg shadow-md p-4 sticky top-28">
+                                <h3 class="text-xl font-bold mb-4 pb-2 border-b-2 border-orange-primary">Về Chúng Tôi</h3>
+                                <ul class="space-y-1">
+                                    <li><a href="#gioithieu-page" class="main-nav-link sidebar-link block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-orange-primary hover:text-white">Thư ngỏ</a></li>
+                                    <li><a href="#hosonangluc-page" class="main-nav-link sidebar-link active block w-full text-left px-4 py-3 rounded-md font-semibold">Hồ sơ năng lực</a></li>
+                                    <li><a href="#cosovatchat-page" class="main-nav-link sidebar-link block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-orange-primary hover:text-white">Cơ sở vật chất</a></li>
+                                    <li><a href="#chinhsachchatluong-page" class="main-nav-link sidebar-link block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-orange-primary hover:text-white">Chính sách chất lượng</a></li>
+                                    <li><a href="#chinhsachbaomat-page" class="main-nav-link sidebar-link block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-orange-primary hover:text-white">Chính sách bảo mật</a></li>
+                                </ul>
+                            </div>
+                        </aside>
+                        <div class="lg:col-span-3 bg-white rounded-lg shadow-md p-6 md:p-8">
+                             <div class="space-y-4 text-gray-700">
+                                <p><strong>Tên công ty:</strong> CÔNG TY CỔ PHẦN XUẤT NHẬP KHẨU VÀ XÂY DỰNG 899</p>
+                                <p><strong>Mã số thuế:</strong> 0109676893</p>
+                                <p><strong>Trụ sở:</strong> Số 97 ngõ 143 đường Xuân Phương, Phường Phương Canh, Quận Nam Từ Liêm, Thành phố Hà Nội, Việt Nam</p>
+                                <p><strong>VPGD:</strong> Phòng 403, tầng 4 Tòa HOUSINCO Premium, số 288 Nguyễn Xiển, Tân Triều, Thanh Trì, TP. Hà Nội.</p>
+                                <p><strong>Điện thoại:</strong> 0987 822 311 - 0987811 158 - 0989 253 992</p>
+                                <p><strong>Email:</strong> xnk899@gmail.com</p>
+                                <p><strong>Website:</strong> https://xnk899.com/</p>
+                                <p><strong>Đại diện:</strong> Ông Nguyễn Văn Khánh - Chức vụ: Giám Đốc</p>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 mt-10 mb-4">Lĩnh vực hoạt động</h3>
+                            <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                 <li><strong>Sản phẩm cung cấp:</strong> Rèm ngăn cháy, Kính ngăn cháy cách nhiệt hệ E, EI, Tấm panel ngăn cháy, Ống nhựa C-PVC ngăn cháy, và các sản phẩm ngăn cháy khác.</li>
+                                 <li><strong>Dịch vụ cung cấp:</strong> Thi công, lắp đặt các hạng mục Phòng cháy chữa cháy.</li>
+                             </ul>
+                            <h3 class="text-2xl font-bold text-gray-800 mt-8 mb-4">Triết lý kinh doanh</h3>
+                            <p class="text-gray-600 leading-relaxed pl-4 border-l-4 border-orange-primary">Chữ “TÍN” chính là triết lý kinh doanh của Công ty. Sự uy tín của khách hàng là thước đo để đánh giá năng lực phục vụ, khả năng cung cấp sản phẩm của chúng tôi. Không chỉ là bán sản phẩm, mà chúng tôi còn muốn mang đến những giá trị về tinh thần.</p>
+                             <h3 class="text-2xl font-bold text-gray-800 mt-8 mb-4">Chiến lược phát triển</h3>
+                             <p class="text-gray-600 leading-relaxed pl-4 border-l-4 border-orange-primary">Tập trung trí tuệ và sức lực, nắm bắt thời cơ, khai thác tối đa nguồn vốn, mạnh dạn đầu tư thiết bị, con người, ứng dụng công nghệ tiên tiến vào sản xuất kinh doanh; xây dựng Công ty trở thành một doanh nghiệp phát triển mạnh toàn diện trong lĩnh vực các vật liệu xây dựng ngăn cháy.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <!-- =================================================================== -->
+        <!-- ======================= CƠ SỞ VẬT CHẤT PAGE ======================= -->
+        <!-- =================================================================== -->
+        <div id="cosovatchat-page" class="page-content">
+            <section class="relative bg-gray-800 text-white py-20">
+                <img src="https://xnk899.com/files/tin/40/jpg/kiem-dinh-rem/-man-ngan-chay-90-phut.jpg" class="absolute inset-0 w-full h-full object-cover opacity-30">
+                <div class="container mx-auto px-4 relative z-10 text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold uppercase">Cơ Sở Vật Chất và Năng Lực Nhân Sự</h1>
+                    <div class="mt-4 text-sm">
+                        <a href="#homepage" class="main-nav-link hover:text-orange-primary">Trang chủ</a><span class="mx-2">/</span><span>Cơ sở vật chất</span>
+                    </div>
+                </div>
+            </section>
+            <section class="py-16 lg:py-20 bg-gray-50">
+                <div class="container mx-auto px-4">
+                    <div class="grid lg:grid-cols-4 gap-8 lg:gap-12">
+                        <aside class="lg:col-span-1">
+                            <div class="bg-white rounded-lg shadow-md p-4 sticky top-28">
+                                <h3 class="text-xl font-bold mb-4 pb-2 border-b-2 border-orange-primary">Về Chúng Tôi</h3>
+                                <ul class="space-y-1">
+                                    <li><a href="#gioithieu-page" class="main-nav-link sidebar-link block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-orange-primary hover:text-white">Thư ngỏ</a></li>
+                                    <li><a href="#hosonangluc-page" class="main-nav-link sidebar-link block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-orange-primary hover:text-white">Hồ sơ năng lực</a></li>
+                                    <li><a href="#cosovatchat-page" class="main-nav-link sidebar-link active block w-full text-left px-4 py-3 rounded-md font-semibold">Cơ sở vật chất</a></li>
+                                    <li><a href="#chinhsachchatluong-page" class="main-nav-link sidebar-link block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-orange-primary hover:text-white">Chính sách chất lượng</a></li>
+                                    <li><a href="#chinhsachbaomat-page" class="main-nav-link sidebar-link block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-orange-primary hover:text-white">Chính sách bảo mật</a></li>
+                                </ul>
+                            </div>
+                        </aside>
+                        <div class="lg:col-span-3 bg-white rounded-lg shadow-md p-6 md:p-8">
+                            <h2 class="text-3xl font-bold text-gray-800 mb-6 pb-3 border-b">Năng lực nhân sự</h2>
+                            <p class="text-gray-600 leading-relaxed mb-6">Yếu tố con người chính là một trong những điều quan trọng dẫn đến sự thành công của công ty. Với đội ngũ nhân viên chuyên nghiệp, trình độ chuyên môn cao, tất cả các sản phẩm của công ty đều được kiểm tra kỹ thuật, chất lượng kỹ càng trước khi đưa đến tận tay khác hàng.</p>
+                            <img src="./nang luc.jpg" alt="Sơ đồ tổ chức công ty" class="rounded-lg shadow-md my-6">
+
+                            <h2 class="text-3xl font-bold text-gray-800 my-8 pb-3 border-b">Năng lực thiết bị, máy móc</h2>
+                            <p class="text-gray-600 leading-relaxed mb-6">XNK 899 tự hào sở hữu nhà máy sản xuất hiện đại, được đầu tư hệ thống dây chuyền máy móc nhập khẩu đồng bộ, cho phép sản xuất hàng loạt với độ chính xác cao.</p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                <div class="group"><img src="./1200w.jpg" alt="Máy móc 1" class="rounded-lg shadow-md w-full h-auto"><p class="text-center font-semibold mt-2">Máy cắt LASER 12000W</p></div>
+                                <div class="group"><img src="./yawei.jpg" alt="Máy móc 2" class="rounded-lg shadow-md w-full h-auto"><p class="text-center font-semibold mt-2">Máy chấn YAWEI</p></div>
+                                <div class="group"><img src="./cns.jpg" alt="Máy móc 3" class="rounded-lg shadow-md w-full h-auto"><p class="text-center font-semibold mt-2">Máy đột dập CNC</p></div>
+                                <div class="group"><img src="./robot.jpg" alt="Máy móc 4" class="rounded-lg shadow-md w-full h-auto"><p class="text-center font-semibold mt-2">Robot Hàn tự động</p></div>
+                                <div class="group"><img src="./phun son.jpg" alt="Máy móc 5" class="rounded-lg shadow-md w-full h-auto"><p class="text-center font-semibold mt-2">Lò phun sơn tĩnh điện</p></div>
+                                <div class="group"><img src="./dong goi.jpg" alt="Máy móc 6" class="rounded-lg shadow-md w-full h-auto"><p class="text-center font-semibold mt-2">Máy đóng gói sản phẩm</p></div>
                             </div>
                         </div>
-                        <div class="swiper-slide group relative overflow-hidden rounded-lg">
-                            <img src="https://placehold.co/500x400/bbb/333?text=Du+An+Vinfast" class="w-full h-auto">
-                             <div class="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition-all duration-300 flex items-end">
-                                <h3 class="text-white text-xl font-bold p-4 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300">Nhà máy Vinfast Hải Phòng</h3>
-                            </div>
-                        </div>
-                        <div class="swiper-slide group relative overflow-hidden rounded-lg">
-                            <img src="https://placehold.co/500x400/aaa/333?text=Du+An+The+Zei" class="w-full h-auto">
-                             <div class="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition-all duration-300 flex items-end">
-                                <h3 class="text-white text-xl font-bold p-4 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300">Tòa nhà The Zei Mỹ Đình</h3>
-                            </div>
-                        </div>
-                        <div class="swiper-slide group relative overflow-hidden rounded-lg">
-                            <img src="https://placehold.co/500x400/999/333?text=Du+An+Goldmark" class="w-full h-auto">
-                             <div class="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition-all duration-300 flex items-end">
-                                <h3 class="text-white text-xl font-bold p-4 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300">Goldmark City</h3>
-                            </div>
-                        </div>
                     </div>
-                     <div class="swiper-pagination mt-8 relative"></div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
-        <!-- 6. NEWS -->
-        <section class="py-16 lg:py-24 bg-gray-50">
-            <div class="container mx-auto px-4">
-                 <div class="text-center mb-12">
-                    <h2 class="text-3xl lg:text-4xl font-bold uppercase section-title">Tin Tức & Sự Kiện</h2>
+        <!-- =================================================================== -->
+        <!-- ======================= CHÍNH SÁCH CHẤT LƯỢNG PAGE ======================= -->
+        <!-- =================================================================== -->
+        <div id="chinhsachchatluong-page" class="page-content">
+            <section class="relative bg-gray-800 text-white py-20">
+                <img src="./cong ty xsn 899.jpg" class="absolute inset-0 w-full h-full object-cover opacity-30">
+                <div class="container mx-auto px-4 relative z-10 text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold uppercase">Chính Sách Chất Lượng</h1>
+                    <div class="mt-4 text-sm">
+                        <a href="#homepage" class="main-nav-link hover:text-orange-primary">Trang chủ</a><span class="mx-2">/</span><span>Chính sách chất lượng</span>
+                    </div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- News Card -->
-                    <div class="group bg-white rounded-lg shadow-md overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img src="https://placehold.co/400x250/eee/333?text=Tin+Tuc+1" class="w-full h-auto group-hover:scale-110 transition-transform duration-500">
-                        </div>
-                        <div class="p-6">
-                            <p class="text-sm text-gray-500 mb-2"><i class="fa-regular fa-calendar-alt mr-1"></i> 11/08/2025</p>
-                            <h3 class="text-lg font-bold mb-2 h-14 overflow-hidden"><a href="#" class="group-hover-text-orange transition-colors">Báo giá cửa thép vân gỗ mới nhất tại XNK 899</a></h3>
-                            <a href="#" class="font-semibold text-orange-primary hover:underline">Đọc thêm <i class="fa-solid fa-arrow-right text-xs"></i></a>
-                        </div>
-                    </div>
-                    <!-- News Card -->
-                     <div class="group bg-white rounded-lg shadow-md overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img src="https://placehold.co/400x250/ddd/333?text=Tin+Tuc+2" class="w-full h-auto group-hover:scale-110 transition-transform duration-500">
-                        </div>
-                        <div class="p-6">
-                            <p class="text-sm text-gray-500 mb-2"><i class="fa-regular fa-calendar-alt mr-1"></i> 08/08/2025</p>
-                            <h3 class="text-lg font-bold mb-2 h-14 overflow-hidden"><a href="#" class="group-hover-text-orange transition-colors">Phân biệt cửa thép chống cháy và cửa thép an toàn thông thường</a></h3>
-                            <a href="#" class="font-semibold text-orange-primary hover:underline">Đọc thêm <i class="fa-solid fa-arrow-right text-xs"></i></a>
-                        </div>
-                    </div>
-                    <!-- News Card -->
-                     <div class="group bg-white rounded-lg shadow-md overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img src="https://placehold.co/400x250/ccc/333?text=Tin+Tuc+3" class="w-full h-auto group-hover:scale-110 transition-transform duration-500">
-                        </div>
-                        <div class="p-6">
-                            <p class="text-sm text-gray-500 mb-2"><i class="fa-regular fa-calendar-alt mr-1"></i> 02/08/2025</p>
-                            <h3 class="text-lg font-bold mb-2 h-14 overflow-hidden"><a href="#" class="group-hover-text-orange transition-colors">XNK 899 hoàn thành bàn giao dự án Starlake Tây Hồ Tây</a></h3>
-                            <a href="#" class="font-semibold text-orange-primary hover:underline">Đọc thêm <i class="fa-solid fa-arrow-right text-xs"></i></a>
+            </section>
+            <section class="py-16 lg:py-20 bg-gray-50">
+                <div class="container mx-auto px-4">
+                    <div class="grid lg:grid-cols-4 gap-8 lg:gap-12">
+                        <aside class="lg:col-span-1">
+                            <div class="bg-white rounded-lg shadow-md p-4 sticky top-28">
+                                <h3 class="text-xl font-bold mb-4 pb-2 border-b-2 border-orange-primary">Về Chúng Tôi</h3>
+                                <ul class="space-y-1">
+                                    <li><a href="#gioithieu-page" class="main-nav-link sidebar-link block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-orange-primary hover:text-white">Thư ngỏ</a></li>
+                                    <li><a href="#hosonangluc-page" class="main-nav-link sidebar-link block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-orange-primary hover:text-white">Hồ sơ năng lực</a></li>
+                                    <li><a href="#cosovatchat-page" class="main-nav-link sidebar-link block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-orange-primary hover:text-white">Cơ sở vật chất</a></li>
+                                    <li><a href="#chinhsachchatluong-page" class="main-nav-link sidebar-link active block w-full text-left px-4 py-3 rounded-md font-semibold">Chính sách chất lượng</a></li>
+                                    <li><a href="#chinhsachbaomat-page" class="main-nav-link sidebar-link block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-orange-primary hover:text-white">Chính sách bảo mật</a></li>
+                                </ul>
+                            </div>
+                        </aside>
+                        <div class="lg:col-span-3 bg-white rounded-lg shadow-md p-6 md:p-8">
+                             <h2 class="text-3xl font-bold text-gray-800 mb-6 pb-3 border-b">Chính Sách Chất Lượng</h2>
+                             <ul class="list-disc list-inside text-gray-600 space-y-4 leading-relaxed">
+                                 <li>Luôn cung cấp những sản phẩm dịch vụ tốt nhất, đảm bảo thi công đúng tiến độ, chất lượng, hiệu quả, an toàn như đã thỏa thuận với khách hàng.</li>
+                                 <li>Không ngừng cải tiến về mọi mặt để đạt được sự hoàn hảo về sản phẩm và dịch vụ cung cấp, về mối quan hệ với khách hàng và khả năng cạnh tranh của Công ty trên thị trường.</li>
+                                 <li>Tăng cường đầu tư trang thiết bị kỹ thuật và công nghệ thi công hiện đại; nghiên cứu và ứng dụng các phương thức quản lý hiệu quả, chuyên nghiệp, tiên tiến nhất nhằm đáp ứng tối đa yêu cầu của Khách hàng, Đối tác.</li>
+                                 <li>Liên tục đào tạo, bồi dưỡng chuyên môn nhằm phát triển nguồn nhân lực; đáp ứng được nhu cầu đổi mới của thị trường, sự phát triển của khoa học công nghệ hiện đại.</li>
+                             </ul>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
+        <!-- =================================================================== -->
+        <!-- ======================= CHÍNH SÁCH BẢO MẬT PAGE ======================= -->
+        <!-- =================================================================== -->
+        <div id="chinhsachbaomat-page" class="page-content">
+            <section class="relative bg-gray-800 text-white py-20">
+                <img src="https://xnk899.com/files/assets/z5623388599479_5fbad82212048734be3247ae7d06d43d.jpg" class="absolute inset-0 w-full h-full object-cover opacity-30">
+                <div class="container mx-auto px-4 relative z-10 text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold uppercase">Chính Sách Bảo Mật</h1>
+                    <div class="mt-4 text-sm">
+                        <a href="#homepage" class="main-nav-link hover:text-orange-primary">Trang chủ</a><span class="mx-2">/</span><span>Chính sách bảo mật</span>
+                    </div>
+                </div>
+            </section>
+            <section class="py-16 lg:py-20 bg-gray-50">
+                <div class="container mx-auto px-4">
+                    <div class="grid lg:grid-cols-4 gap-8 lg:gap-12">
+                        <aside class="lg:col-span-1">
+                            <div class="bg-white rounded-lg shadow-md p-4 sticky top-28">
+                                <h3 class="text-xl font-bold mb-4 pb-2 border-b-2 border-orange-primary">Về Chúng Tôi</h3>
+                                <ul class="space-y-1">
+                                    <li><a href="#gioithieu-page" class="main-nav-link sidebar-link block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-orange-primary hover:text-white">Thư ngỏ</a></li>
+                                    <li><a href="#hosonangluc-page" class="main-nav-link sidebar-link block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-orange-primary hover:text-white">Hồ sơ năng lực</a></li>
+                                    <li><a href="#cosovatchat-page" class="main-nav-link sidebar-link block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-orange-primary hover:text-white">Cơ sở vật chất</a></li>
+                                    <li><a href="#chinhsachchatluong-page" class="main-nav-link sidebar-link block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-orange-primary hover:text-white">Chính sách chất lượng</a></li>
+                                    <li><a href="#chinhsachbaomat-page" class="main-nav-link sidebar-link active block w-full text-left px-4 py-3 rounded-md font-semibold">Chính sách bảo mật</a></li>
+                                </ul>
+                            </div>
+                        </aside>
+                        <div class="lg:col-span-3 bg-white rounded-lg shadow-md p-6 md:p-8">
+                            <div class="space-y-6 text-gray-600 leading-relaxed">
+                                <div><h4 class="text-lg font-bold text-gray-700 mb-2">1. Mục đích thu thập thông tin</h4><p>Chúng tôi thu thập thông tin cá nhân của khách hàng (họ tên, số điện thoại, email, địa chỉ) nhằm mục đích: tư vấn, báo giá, xử lý đơn đặt hàng, giao hàng và thực hiện các chính sách sau bán hàng.</p></div>
+                                <div><h4 class="text-lg font-bold text-gray-700 mb-2">2. Phạm vi sử dụng thông tin</h4><p>Thông tin cá nhân thu thập được sẽ chỉ được sử dụng trong nội bộ Công ty CP SX TM XNK 899. Chúng tôi cam kết không bán, chia sẻ hay trao đổi thông tin cá nhân của khách hàng cho một bên thứ ba nào khác.</p></div>
+                                <div><h4 class="text-lg font-bold text-gray-700 mb-2">3. Thời gian lưu trữ thông tin</h4><p>Dữ liệu cá nhân của khách hàng sẽ được lưu trữ cho đến khi có yêu cầu hủy bỏ từ khách hàng. Còn lại trong mọi trường hợp thông tin cá nhân khách hàng sẽ được bảo mật trên máy chủ của chúng tôi.</p></div>
+                                <div><h4 class="text-lg font-bold text-gray-700 mb-2">4. Cam kết bảo mật thông tin</h4><p>XNK 899 cam kết bảo mật tuyệt đối thông tin cá nhân của Quý khách theo chính sách bảo vệ thông tin cá nhân. Việc thu thập và sử dụng thông tin của mỗi khách hàng chỉ được thực hiện khi có sự đồng ý của khách hàng đó trừ những trường hợp pháp luật có quy định khác.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
     <!-- FOOTER -->
@@ -335,30 +473,27 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                 <!-- Column 1: Company Info -->
                 <div>
-                    <img src="https://placehold.co/180x60/374151/f36f21?text=XNK+899" alt="XNK 899 Logo" class="h-12 mb-4">
-                    <h4 class="font-bold text-white mb-2 uppercase">CÔNG TY CP SẢN XUẤT THƯƠNG MẠI XNK 899</h4>
-                    <p class="text-sm leading-relaxed"><i class="fa-solid fa-location-dot w-4 mr-2"></i>Địa chỉ: Lô A2, Cụm Công Nghiệp vừa và nhỏ Từ Liêm, P. Minh Khai, Q. Bắc Từ Liêm, Hà Nội</p>
-                    <p class="text-sm mt-2"><i class="fa-solid fa-phone w-4 mr-2"></i>Hotline: 0966.899.899</p>
-                    <p class="text-sm mt-2"><i class="fa-solid fa-envelope w-4 mr-2"></i>Email: xnk899.com@gmail.com</p>
+                    <img src="http://xnk899.baophat.net/files/assets/z2573591825830_3d8ccdf2a70bb865894eca2c4a77231c-removebg-preview.png" alt="XNK 899 Logo" class="h-12 mb-4 bg-white p-1 rounded">
+                    <h4 class="font-bold text-white mb-2 uppercase">CÔNG TY CP XUẤT NHẬP KHẨU VÀ XÂY DỰNG 899</h4>
+                    <p class="text-sm leading-relaxed"><i class="fa-solid fa-location-dot w-4 mr-2"></i>Trụ sở: Số 97 ngõ 143 Xuân Phương, P. Phương Canh, Q. Nam Từ Liêm, Hà Nội</p>
+                    <p class="text-sm mt-2"><i class="fa-solid fa-phone w-4 mr-2"></i>Hotline: 0987.811.158</p>
+                    <p class="text-sm mt-2"><i class="fa-solid fa-envelope w-4 mr-2"></i>Email: xnk899@gmail.com</p>
                 </div>
                 <!-- Column 2: About Us Links -->
                 <div>
                     <h4 class="text-lg font-bold text-white mb-4">VỀ CHÚNG TÔI</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-orange-primary transition-colors">Giới thiệu</a></li>
-                        <li><a href="#" class="hover:text-orange-primary transition-colors">Năng lực sản xuất</a></li>
-                        <li><a href="#" class="hover:text-orange-primary transition-colors">Hồ sơ năng lực</a></li>
-                        <li><a href="#" class="hover:text-orange-primary transition-colors">Tuyển dụng</a></li>
+                        <li><a href="#gioithieu-page" class="main-nav-link hover:text-orange-primary transition-colors">Giới thiệu</a></li>
+                        <li><a href="#hosonangluc-page" class="main-nav-link hover:text-orange-primary transition-colors">Hồ sơ năng lực</a></li>
+                        <li><a href="#cosovatchat-page" class="main-nav-link hover:text-orange-primary transition-colors">Cơ sở vật chất</a></li>
                     </ul>
                 </div>
                 <!-- Column 3: Policies -->
                 <div>
                     <h4 class="text-lg font-bold text-white mb-4">CHÍNH SÁCH</h4>
                      <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-orange-primary transition-colors">Chính sách bảo hành</a></li>
-                        <li><a href="#" class="hover:text-orange-primary transition-colors">Chính sách vận chuyển</a></li>
-                        <li><a href="#" class="hover:text-orange-primary transition-colors">Chính sách thanh toán</a></li>
-                        <li><a href="#" class="hover:text-orange-primary transition-colors">Chính sách bảo mật</a></li>
+                        <li><a href="#chinhsachchatluong-page" class="main-nav-link hover:text-orange-primary transition-colors">Chính sách chất lượng</a></li>
+                        <li><a href="#chinhsachbaomat-page" class="main-nav-link hover:text-orange-primary transition-colors">Chính sách bảo mật</a></li>
                     </ul>
                 </div>
                 <!-- Column 4: Facebook -->
@@ -377,47 +512,121 @@
         </div>
     </footer>
 
+    <!-- FLOATING CONTACT BUTTONS -->
+    <div class="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-4">
+        <!-- Zalo Button -->
+        <div class="group relative flex items-center">
+            <div class="hidden group-hover:block bg-white text-sm text-gray-700 font-semibold px-4 py-2 rounded-l-full shadow-lg transition-all duration-300 mr-2">
+                Chat Zalo
+            </div>
+            <a href="https://zalo.me/0987811158" target="_blank" class="w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center text-white shadow-lg relative">
+                <img src="https://cuachongchayskylight.vn/wp-content/plugins/button-contact-vr/img/zalo.png" class="w-8 h-8">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+            </a>
+        </div>
+        <!-- Phone Button -->
+        <div class="group relative flex items-center">
+            <div class="hidden group-hover:block bg-white text-sm text-gray-700 font-semibold px-4 py-2 rounded-l-full shadow-lg transition-all duration-300 mr-2">
+                0987.811.158
+            </div>
+            <a href="tel:0987811158" class="w-14 h-14 bg-orange-primary rounded-full flex items-center justify-center text-white shadow-lg relative">
+                <i class="fa-solid fa-phone text-2xl"></i>
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+            </a>
+        </div>
+    </div>
 
     <script>
-        // Mobile Menu
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+        // --- PAGE NAVIGATION LOGIC ---
+        const mainNavLinks = document.querySelectorAll('.main-nav-link');
+        const pageContents = document.querySelectorAll('.page-content');
+
+        function showPage(targetId) {
+            pageContents.forEach(page => page.classList.remove('active'));
+            const targetPage = document.getElementById(targetId);
+            if (targetPage) {
+                targetPage.classList.add('active');
+            }
+
+            mainNavLinks.forEach(nav => nav.classList.remove('active'));
+            document.querySelectorAll(`.main-nav-link[href="#${targetId}"]`).forEach(activeLink => {
+                activeLink.classList.add('active');
+            });
+            
+            // Special handling for "Giới thiệu" dropdown parent
+            if (targetId.startsWith('gioithieu') || targetId.startsWith('hosonangluc') || targetId.startsWith('cosovatchat') || targetId.startsWith('chinhsach')) {
+                 document.querySelector('a.main-nav-link[href="#gioithieu-page"]').classList.add('active');
+            }
+
+            window.scrollTo(0, 0);
+        }
+
+        mainNavLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                showPage(targetId);
+            });
         });
 
-        // Hero Slider
+        // --- MOBILE MENU ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+
+
+        // --- HERO SLIDER ---
         const heroSlider = new Swiper('.hero-slider', {
             loop: true,
-            autoplay: {
-                delay: 5000,
-            },
+            autoplay: { delay: 5000 },
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
         });
 
-        // Project Slider
+        // --- PROJECT SLIDER ---
         const projectSlider = new Swiper('.project-slider', {
             loop: true,
             slidesPerView: 1,
             spaceBetween: 20,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
+            pagination: { el: '.swiper-pagination', clickable: true },
+            breakpoints: {
+                640: { slidesPerView: 2, spaceBetween: 20 },
+                1024: { slidesPerView: 3, spaceBetween: 30 },
+            }
+        });
+
+        // --- FEATURED PRODUCT SLIDER ---
+        const featuredProductSlider = new Swiper('.featured-product-slider', {
+            loop: true,
+            slidesPerView: 2,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
             },
             breakpoints: {
                 640: {
-                    slidesPerView: 2,
+                    slidesPerView: 3,
                     spaceBetween: 20,
                 },
                 1024: {
-                    slidesPerView: 3,
+                    slidesPerView: 4,
                     spaceBetween: 30,
                 },
             }
         });
+
     </script>
 
 </body>

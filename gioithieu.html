@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Trang Giới Thiệu - Cửa Thép XNK 899</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Thư viện icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+        }
+        .text-orange-primary {
+            color: #f36f21;
+        }
+        .bg-orange-primary {
+            background-color: #f36f21;
+        }
+        .hover\:bg-orange-secondary:hover {
+            background-color: #e06017;
+        }
+        .border-orange-primary {
+            border-color: #f36f21;
+        }
+        .sidebar-link.active {
+            background-color: #f36f21;
+            color: white;
+            border-right: 4px solid #c25413;
+        }
+        .content-section {
+            display: none;
+        }
+        .content-section.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- HEADER -->
+    <header id="header" class="bg-white shadow-md sticky top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-2">
+                <!-- Logo -->
+                <a href="#" class="flex-shrink-0">
+                    <img src="https://placehold.co/180x60/ffffff/f36f21?text=XNK+899" alt="XNK 899 Logo" class="h-12 md:h-16">
+                </a>
+
+                <!-- Navigation -->
+                <nav class="hidden lg:flex items-center space-x-6">
+                    <a href="#" class="font-semibold hover:text-orange-primary transition uppercase tracking-wider">Trang chủ</a>
+                    <a href="#gioithieu.html" class="font-bold text-orange-primary uppercase tracking-wider">Giới thiệu</a>
+                    <div class="group relative">
+                        <a href="#" class="font-semibold hover:text-orange-primary transition uppercase tracking-wider flex items-center">
+                            Sản phẩm <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
+                        </a>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2 w-60 py-2 z-20">
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Cửa thép vân gỗ</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Cửa thép chống cháy</a>
+                        </div>
+                    </div>
+                    <a href="#" class="font-semibold hover:text-orange-primary transition uppercase tracking-wider">Báo giá</a>
+                    <a href="#" class="font-semibold hover:text-orange-primary transition uppercase tracking-wider">Tin tức</a>
+                    <a href="#" class="font-semibold hover:text-orange-primary transition uppercase tracking-wider">Liên hệ</a>
+                </nav>
+
+                <!-- Hotline -->
+                <div class="hidden md:flex items-center">
+                    <a href="tel:0966899899" class="bg-orange-primary text-white px-4 py-2 rounded-full font-bold hover:bg-orange-secondary transition-colors flex items-center space-x-2">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <span>0966.899.899</span>
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="lg:hidden text-2xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. BREADCRUMB & BANNER -->
+        <section class="relative bg-gray-800 text-white py-20">
+            <img src="https://placehold.co/1920x400/333/555?text=Gioi+Thieu+Cong+Ty" class="absolute inset-0 w-full h-full object-cover opacity-30">
+            <div class="container mx-auto px-4 relative z-10 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold uppercase">Giới Thiệu</h1>
+                <div class="mt-4 text-sm">
+                    <a href="#" class="hover:text-orange-primary">Trang chủ</a>
+                    <span class="mx-2">/</span>
+                    <span>Giới thiệu</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. MAIN CONTENT WITH SIDEBAR -->
+        <section class="py-16 lg:py-20">
+            <div class="container mx-auto px-4">
+                <div class="grid lg:grid-cols-4 gap-8 lg:gap-12">
+                    
+                    <!-- LEFT SIDEBAR -->
+                    <aside class="lg:col-span-1">
+                        <div class="bg-white rounded-lg shadow-md p-4 sticky top-28">
+                            <h3 class="text-xl font-bold mb-4 pb-2 border-b-2 border-orange-primary">Về Chúng Tôi</h3>
+                            <ul id="sidebar-nav" class="space-y-1">
+                                <li><a href="#gioi-thieu" class="sidebar-link active block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-orange-primary hover:text-white transition-colors">Giới thiệu chung</a></li>
+                                <li><a href="#ho-so-nang-luc" class="sidebar-link block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-orange-primary hover:text-white transition-colors">Hồ sơ năng lực</a></li>
+                                <li><a href="#co-so-vat-chat" class="sidebar-link block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-orange-primary hover:text-white transition-colors">Cơ sở vật chất</a></li>
+                                <li><a href="#chinh-sach-bao-mat" class="sidebar-link block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-orange-primary hover:text-white transition-colors">Chính sách bảo mật</a></li>
+                            </ul>
+                        </div>
+                    </aside>
+
+                    <!-- RIGHT CONTENT -->
+                    <div class="lg:col-span-3 bg-white rounded-lg shadow-md p-6 md:p-8">
+                        
+                        <!-- Section: Giới thiệu chung -->
+                        <div id="gioi-thieu" class="content-section active">
+                            <h2 class="text-3xl font-bold text-gray-800 mb-6 pb-3 border-b">Lời Giới Thiệu</h2>
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                Kính gửi Quý khách hàng và Đối tác,
+                            </p>
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                Công ty CP Sản xuất Thương mại XNK 899 xin gửi lời chào trân trọng, lời chúc sức khỏe và thành công. Cảm ơn sự tin tưởng và ủng hộ của Quý vị trong suốt chặng đường phát triển của chúng tôi.
+                            </p>
+                            <img src="https://placehold.co/800x450/ccc/333?text=Doi+Ngu+XNK+899" alt="Đội ngũ XNK 899" class="rounded-lg shadow-md my-6">
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                XNK 899 là nhà sản xuất và cung cấp cửa thép hàng đầu tại Việt Nam. Với nhà máy quy mô lớn và dây chuyền sản xuất hiện đại, chúng tôi chuyên cung cấp các sản phẩm cửa thép vân gỗ, cửa thép chống cháy, cửa ABS Hàn Quốc và cửa gỗ công nghiệp. Sứ mệnh của chúng tôi là "Kiến tạo giá trị - Vững bước tương lai", mang đến những sản phẩm chất lượng cao, bền đẹp, an toàn, góp phần nâng tầm không gian sống cho người Việt.
+                            </p>
+                            <p class="text-gray-600 leading-relaxed">
+                                Chúng tôi cam kết không ngừng đổi mới, sáng tạo để đáp ứng mọi nhu cầu của khách hàng và trở thành người bạn đồng hành đáng tin cậy trên mọi công trình.
+                            </p>
+                        </div>
+
+                        <!-- Section: Hồ sơ năng lực -->
+                        <div id="ho-so-nang-luc" class="content-section">
+                            <h2 class="text-3xl font-bold text-gray-800 mb-6 pb-3 border-b">Hồ Sơ Năng Lực</h2>
+                            <div class="space-y-4 text-gray-700">
+                                <p><strong>Tên công ty:</strong> CÔNG TY CP SẢN XUẤT THƯƠNG MẠI XNK 899</p>
+                                <p><strong>Địa chỉ:</strong> Lô A2, Cụm Công Nghiệp vừa và nhỏ Từ Liêm, P. Minh Khai, Q. Bắc Từ Liêm, Hà Nội</p>
+                                <p><strong>Mã số thuế:</strong> 0108555689</p>
+                                <p><strong>Hotline:</strong> 0966.899.899</p>
+                                <p><strong>Email:</strong> xnk899.com@gmail.com</p>
+                                <p><strong>Website:</strong> www.xnk899.com</p>
+                            </div>
+
+                            <h3 class="text-2xl font-bold text-gray-800 mt-10 mb-4">Tầm Nhìn</h3>
+                            <p class="text-gray-600 leading-relaxed pl-4 border-l-4 border-orange-primary">Trở thành một trong những nhà sản xuất và cung cấp các sản phẩm cửa hàng đầu Việt Nam, mang đến những sản phẩm chất lượng cao, bền đẹp, an toàn cho người sử dụng.</p>
+
+                            <h3 class="text-2xl font-bold text-gray-800 mt-8 mb-4">Sứ Mệnh</h3>
+                            <p class="text-gray-600 leading-relaxed pl-4 border-l-4 border-orange-primary">Cung cấp các sản phẩm cửa chất lượng tốt nhất với giá cả cạnh tranh, góp phần mang lại sự an toàn và tiện nghi cho mọi gia đình Việt.</p>
+
+                             <h3 class="text-2xl font-bold text-gray-800 mt-8 mb-4">Giá Trị Cốt Lõi</h3>
+                             <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                 <li><strong>Chất lượng:</strong> Luôn đặt chất lượng sản phẩm lên hàng đầu.</li>
+                                 <li><strong>Uy tín:</strong> Xây dựng niềm tin và sự tín nhiệm của khách hàng.</li>
+                                 <li><strong>Sáng tạo:</strong> Không ngừng đổi mới để tạo ra những sản phẩm ưu việt.</li>
+                                 <li><strong>Tận tâm:</strong> Phục vụ khách hàng bằng sự chuyên nghiệp và tận tình.</li>
+                                 <li><strong>Hợp tác:</strong> Cùng phát triển bền vững với các đối tác.</li>
+                             </ul>
+                        </div>
+
+                        <!-- Section: Cơ sở vật chất -->
+                        <div id="co-so-vat-chat" class="content-section">
+                            <h2 class="text-3xl font-bold text-gray-800 mb-6 pb-3 border-b">Cơ Sở Vật Chất & Nhà Máy</h2>
+                            <p class="text-gray-600 leading-relaxed mb-6">
+                                XNK 899 tự hào sở hữu nhà máy sản xuất hiện đại tại Cụm Công nghiệp Từ Liêm, Hà Nội. Nhà máy được đầu tư hệ thống dây chuyền máy móc nhập khẩu đồng bộ, cho phép sản xuất hàng loạt với độ chính xác cao, đáp ứng các đơn hàng lớn trong thời gian ngắn nhất.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div class="group">
+                                    <img src="https://placehold.co/600x400/ddd/333?text=Nha+Xuong+San+Xuat" alt="Nhà xưởng sản xuất" class="rounded-lg shadow-md w-full h-auto">
+                                    <p class="text-center font-semibold mt-2">Toàn cảnh nhà xưởng XNK 899</p>
+                                </div>
+                                <div class="group">
+                                    <img src="https://placehold.co/600x400/dcc/333?text=May+Moc+Hien+Dai" alt="Máy móc hiện đại" class="rounded-lg shadow-md w-full h-auto">
+                                    <p class="text-center font-semibold mt-2">Hệ thống máy móc công nghệ cao</p>
+                                </div>
+                                <div class="group">
+                                    <img src="https://placehold.co/600x400/dbb/333?text=Day+Chuyen+Son" alt="Dây chuyền sơn tĩnh điện" class="rounded-lg shadow-md w-full h-auto">
+                                    <p class="text-center font-semibold mt-2">Dây chuyền sơn tĩnh điện tự động</p>
+                                </div>
+                                <div class="group">
+                                    <img src="https://placehold.co/600x400/daa/333?text=Khu+Vuc+Luu+Kho" alt="Khu vực lưu kho" class="rounded-lg shadow-md w-full h-auto">
+                                    <p class="text-center font-semibold mt-2">Kho thành phẩm sẵn sàng cung ứng</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section: Chính sách bảo mật -->
+                        <div id="chinh-sach-bao-mat" class="content-section">
+                            <h2 class="text-3xl font-bold text-gray-800 mb-6 pb-3 border-b">Chính Sách Bảo Mật Thông Tin</h2>
+                            <div class="space-y-6 text-gray-600 leading-relaxed">
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-700 mb-2">1. Mục đích thu thập thông tin</h4>
+                                    <p>Chúng tôi thu thập thông tin cá nhân của khách hàng (họ tên, số điện thoại, email, địa chỉ) nhằm mục đích: tư vấn, báo giá, xử lý đơn đặt hàng, giao hàng và thực hiện các chính sách sau bán hàng.</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-700 mb-2">2. Phạm vi sử dụng thông tin</h4>
+                                    <p>Thông tin cá nhân thu thập được sẽ chỉ được sử dụng trong nội bộ Công ty CP SX TM XNK 899. Chúng tôi cam kết không bán, chia sẻ hay trao đổi thông tin cá nhân của khách hàng cho một bên thứ ba nào khác.</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-700 mb-2">3. Thời gian lưu trữ thông tin</h4>
+                                    <p>Dữ liệu cá nhân của khách hàng sẽ được lưu trữ cho đến khi có yêu cầu hủy bỏ từ khách hàng. Còn lại trong mọi trường hợp thông tin cá nhân khách hàng sẽ được bảo mật trên máy chủ của chúng tôi.</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-700 mb-2">4. Cam kết bảo mật thông tin</h4>
+                                    <p>XNK 899 cam kết bảo mật tuyệt đối thông tin cá nhân của Quý khách theo chính sách bảo vệ thông tin cá nhân. Việc thu thập và sử dụng thông tin của mỗi khách hàng chỉ được thực hiện khi có sự đồng ý của khách hàng đó trừ những trường hợp pháp luật có quy định khác.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-800 text-gray-300">
+        <div class="container mx-auto px-4 py-12">
+            <p class="text-center text-sm">&copy; 2025 Bản quyền thuộc về Công ty CP SX TM XNK 899</p>
+        </div>
+    </footer>
+
+
+    <script>
+        // Mobile Menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Sidebar Navigation
+        const sidebarLinks = document.querySelectorAll('.sidebar-link');
+        const contentSections = document.querySelectorAll('.content-section');
+
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+
+                // Remove active state from all links and sections
+                sidebarLinks.forEach(l => l.classList.remove('active'));
+                contentSections.forEach(s => s.classList.remove('active'));
+
+                // Add active state to the clicked link
+                link.classList.add('active');
+
+                // Show the corresponding content section
+                const targetId = link.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
