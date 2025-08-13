@@ -82,19 +82,42 @@
 <body class="bg-white">
 
     <!-- HEADER -->
-    <header id="header" class="bg-white shadow-md sticky top-0 z-50 transition-all duration-300">
+<header id="header" class="bg-white shadow-md sticky top-0 z-50 transition-all duration-300">
+
+    <div class="bg-gray-800 text-gray-300 text-xs hidden md:block">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-1">
+                <div class="flex items-center space-x-4">
+                    <a href="tel:0987811158" class="hover:text-white transition-colors flex items-center">
+                        <i class="fa-solid fa-phone mr-2"></i>
+                        <span>0987.811.158</span>
+                    </a>
+                </div>
+
+                <div class="text-center">
+                    <p class="font-semibold uppercase">CHÀO MỪNG BẠN ĐẾN VỚI XNK 899</p>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <a href="#" aria-label="Facebook" class="hover:text-white transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="YouTube" class="hover:text-white transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="Twitter" class="hover:text-white transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="mailto:xnk899@gmail.com" aria-label="Email" class="hover:text-white transition-colors"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="border-b border-gray-200">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-2">
-                <!-- Logo -->
                 <a href="#homepage" class="main-nav-link flex-shrink-0">
-                    <img src="https://i.imgur.com/8J5tB6V.png" alt="XNK 899 Logo" class="h-12 md:h-16">
+                    <img src="./logo.png" alt="XNK 899 Logo" class="h-12 md:h-16">
                 </a>
 
-                <!-- Navigation -->
                 <nav id="main-nav" class="hidden lg:flex items-center space-x-6">
                     <a href="#homepage" class="main-nav-link active uppercase tracking-wider">Trang chủ</a>
                     
-                    <!-- Giới thiệu Dropdown -->
                     <div class="group relative">
                         <a href="#gioithieu-page" class="main-nav-link font-semibold hover:text-orange-primary transition uppercase tracking-wider flex items-center">
                             Giới thiệu <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
@@ -122,32 +145,31 @@
                     <a href="#" class="font-semibold hover:text-orange-primary transition uppercase tracking-wider">Liên hệ</a>
                 </nav>
 
-                <!-- Hotline & Search -->
-                <div class="hidden md:flex items-center space-x-4">
-                    <a href="tel:0987811158" class="bg-orange-primary text-white px-4 py-2 rounded-full font-bold hover:bg-orange-secondary transition-colors flex items-center space-x-2">
-                        <i class="fa-solid fa-phone-volume"></i>
-                        <span>0987.811.158</span>
-                    </a>
+                <div class="flex items-center space-x-4">
+                    <div class="hidden lg:flex items-center space-x-4 text-gray-600">
+                        <a href="#" aria-label="Search" class="hover:text-orange-primary"><i class="fa-solid fa-search"></i></a>
+                        <a href="#" aria-label="Shopping Cart" class="hover:text-orange-primary"><i class="fa-solid fa-shopping-cart"></i></a>
+                    </div>
+                    
+                    <button id="mobile-menu-button" class="lg:hidden text-2xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
                 </div>
-                
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-button" class="lg:hidden text-2xl">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
             </div>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white shadow-lg border-t">
-            <nav class="flex flex-col">
-                <a href="#homepage" class="main-nav-link block py-3 px-4 font-semibold border-b hover:bg-gray-50">Trang chủ</a>
-                <a href="#gioithieu-page" class="main-nav-link block py-3 px-4 font-semibold border-b hover:bg-gray-50">Giới thiệu</a>
-                <a href="#" class="block py-3 px-4 font-semibold border-b hover:bg-gray-50">Sản phẩm</a>
-                <a href="#" class="block py-3 px-4 font-semibold border-b hover:bg-gray-50">Dự án</a>
-                <a href="#" class="block py-3 px-4 font-semibold border-b hover:bg-gray-50">Tin tức</a>
-                <a href="#" class="block py-3 px-4 font-semibold hover:bg-gray-50">Liên hệ</a>
-            </nav>
-        </div>
-    </header>
+    </div>
+    
+    <div id="mobile-menu" class="hidden lg:hidden bg-white shadow-lg border-t">
+        <nav class="flex flex-col">
+            <a href="#homepage" class="main-nav-link block py-3 px-4 font-semibold border-b hover:bg-gray-50">Trang chủ</a>
+            <a href="#gioithieu-page" class="main-nav-link block py-3 px-4 font-semibold border-b hover:bg-gray-50">Giới thiệu</a>
+            <a href="#" class="block py-3 px-4 font-semibold border-b hover:bg-gray-50">Sản phẩm</a>
+            <a href="#" class="block py-3 px-4 font-semibold border-b hover:bg-gray-50">Dự án</a>
+            <a href="#" class="block py-3 px-4 font-semibold border-b hover:bg-gray-50">Tin tức</a>
+            <a href="#" class="block py-3 px-4 font-semibold hover:bg-gray-50">Liên hệ</a>
+        </nav>
+    </div>
+</header>
 
     <main>
         <!-- =================================================================== -->
@@ -155,10 +177,11 @@
         <!-- =================================================================== -->
         <div id="homepage" class="page-content active">
             <!-- 1. HERO SLIDER -->
-            <section class="swiper hero-slider h-[60vh] md:h-[85vh]">
+            <section class="swiper hero-slider h-[50vh] md:h-[49vh]">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide relative"><img src="https://xnk899.com/files/tin/42/jpg/thu-nghiem-kha-nang-chiu-lua-cua-rem/-man-ngan-chay-90-phut.jpg" class="w-full h-full object-cover"></div>
-                    <div class="swiper-slide relative"><img src="https://xnk899.com/files/tin/41/jpg/thu-nghiem-kha-nang-chiu-lua-cua-man/-rem-ngan-chay-60-phut.jpg" class="w-full h-full object-cover"></div>
+                    <div class="swiper-slide relative"><img src="./1.png" class="w-full h-full object-cover"></div>
+                    <div class="swiper-slide relative"><img src="./2.png" class="w-full h-full object-cover"></div>
+                    <div class="swiper-slide relative"><img src="./3.png" class="w-full h-full object-cover"></div>
                 </div>
                  <div class="absolute inset-0 bg-black/50"></div>
                 <div class="absolute inset-0 flex items-center justify-center text-white text-center">
@@ -193,30 +216,176 @@
             </section>
 
             <!-- 3. FEATURED PRODUCTS -->
-            <section class="py-16 lg:py-24 bg-gray-100 relative">
-                <div class="ux-shape-divider--top">
-                    <svg viewBox="0 0 1000 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                        <path class="ux-shape-fill" d="M1000 100H0L0 96H480.929C482.255 96 483.527 95.4732 484.464 94.5355L497.879 81.1213C499.05 79.9497 500.95 79.9497 502.121 81.1213L515.536 94.5355C516.473 95.4732 517.745 96 519.071 96H1000V100Z"></path>
-                    </svg>
-                </div>
-                <div class="container mx-auto px-4">
-                    <div class="text-center mb-12">
-                        <h2 class="text-3xl lg:text-4xl font-bold uppercase section-title" style="color: #26376b;">Sản phẩm Rèm/Màn cuốn ngăn cháy</h2>
-                    </div>
-                    <div class="swiper featured-product-slider">
-                        <div class="swiper-wrapper py-4">
-                            <div class="swiper-slide h-auto"><div class="group bg-white rounded-lg shadow-md overflow-hidden text-center flex flex-col h-full"><div class="overflow-hidden"><img src="./ie 60phut.jpg"></div><div class="p-4 flex flex-col flex-grow"><h3 class="text-base font-bold flex-grow">Rèm ngăn cháy EI 60 phút</h3></div></div></div>
-                            <div class="swiper-slide h-auto"><div class="group bg-white rounded-lg shadow-md overflow-hidden text-center flex flex-col h-full"><div class="overflow-hidden"><img src="./ie 90phut.jpg" class="w-full h-48 object-cover"></div><div class="p-4 flex flex-col flex-grow"><h3 class="text-base font-bold flex-grow">Rèm ngăn cháy EI 90 phút</h3></div></div></div>
-                            <div class="swiper-slide h-auto"><div class="group bg-white rounded-lg shadow-md overflow-hidden text-center flex flex-col h-full"><div class="overflow-hidden"><img src="./thi cong rem ngan chay.jpg" class="w-full h-48 object-cover"></div><div class="p-4 flex flex-col flex-grow"><h3 class="text-base font-bold flex-grow">Thi công rèm ngăn cháy</h3></div></div></div>
-                            <div class="swiper-slide h-auto"><div class="group bg-white rounded-lg shadow-md overflow-hidden text-center flex flex-col h-full"><div class="overflow-hidden"><img src="./thi cong rem ngan chay.jpg" class="w-full h-48 object-cover"></div><div class="p-4 flex flex-col flex-grow"><h3 class="text-base font-bold flex-grow">Rèm ngăn cháy cho nhà xưởng</h3></div></div></div>
-                            <div class="swiper-slide h-auto"><div class="group bg-white rounded-lg shadow-md overflow-hidden text-center flex flex-col h-full"><div class="overflow-hidden"><img src="./tang ham.jpg" class="w-full h-48 object-cover"></div><div class="p-4 flex flex-col flex-grow"><h3 class="text-base font-bold flex-grow">Rèm ngăn cháy cho tầng hầm</h3></div></div></div>
-                        </div>
-                        <div class="swiper-button-next text-gray-600"></div>
-                        <div class="swiper-button-prev text-gray-600"></div>
-                    </div>
-                </div>
-            </section>
 
+<section class="py-16 lg:py-24 bg-gray-100 relative">
+    <div class="ux-shape-divider--top">
+        <svg viewBox="0 0 1000 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path class="ux-shape-fill" d="M1000 100H0L0 96H480.929C482.255 96 483.527 95.4732 484.464 94.5355L497.879 81.1213C499.05 79.9497 500.95 79.9497 502.121 81.1213L515.536 94.5355C516.473 95.4732 517.745 96 519.071 96H1000V100Z"></path>
+        </svg>
+    </div>
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl lg:text-4xl font-bold uppercase section-title" style="color: #26376b;">Sản phẩm Rèm/Màn cuốn ngăn cháy</h2>
+        </div>
+        <div class="swiper featured-product-slider">
+            <div class="swiper-wrapper py-4">
+
+                <div class="swiper-slide h-auto">
+                    <div class="group bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full">
+                        <a href="#" class="block overflow-hidden aspect-square">
+                            <img src="./z6903656809724_3f24807b722a0ab473f7219a4e8f6f3b.jpg" alt="Rèm ngăn cháy EI 60 phút" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        </a>
+                        <div class="p-4 flex flex-col flex-grow text-left">
+                            <h3 class="text-base font-bold flex-grow mb-2">
+                                <a href="#" class="hover:text-orange-primary">Rèm ngăn cháy EI 60 phút</a>
+                            </h3>
+                            <p class="text-orange-primary font-bold mb-4">Liên hệ</p>
+                            <a href="#" class="block w-full bg-orange-primary text-white text-center py-2 rounded-md hover:bg-orange-secondary transition-colors font-semibold text-sm">Thêm vào giỏ</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide h-auto">
+                    <div class="group bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full">
+                        <a href="#" class="block overflow-hidden aspect-square">
+                            <img src="./z6903656726903_bec9d37e9126afad5345f4dc79170506.jpg" alt="Rèm ngăn cháy EI 90 phút" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        </a>
+                        <div class="p-4 flex flex-col flex-grow text-left">
+                            <h3 class="text-base font-bold flex-grow mb-2">
+                                <a href="#" class="hover:text-orange-primary">Rèm ngăn cháy EI 90 phút</a>
+                            </h3>
+                            <p class="text-orange-primary font-bold mb-4">Liên hệ</p>
+                            <a href="#" class="block w-full bg-orange-primary text-white text-center py-2 rounded-md hover:bg-orange-secondary transition-colors font-semibold text-sm">Thêm vào giỏ</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide h-auto">
+                    <div class="group bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full">
+                        <a href="#" class="block overflow-hidden aspect-square">
+                            <img src="./z6903656740609_79c9d5ea44943c842a81ac453497df04.jpg" alt="Thi công rèm ngăn cháy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        </a>
+                        <div class="p-4 flex flex-col flex-grow text-left">
+                            <h3 class="text-base font-bold flex-grow mb-2">
+                                <a href="#" class="hover:text-orange-primary">Thi công rèm ngăn cháy</a>
+                            </h3>
+                            <p class="text-orange-primary font-bold mb-4">Liên hệ</p>
+                            <a href="#" class="block w-full bg-orange-primary text-white text-center py-2 rounded-md hover:bg-orange-secondary transition-colors font-semibold text-sm">Thêm vào giỏ</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide h-auto">
+                    <div class="group bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full">
+                        <a href="#" class="block overflow-hidden aspect-square">
+                            <img src="./z6903656764988_5159d45c0d44e950275e7e495bf35e63.jpg" alt="Rèm ngăn cháy cho nhà xưởng" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        </a>
+                        <div class="p-4 flex flex-col flex-grow text-left">
+                            <h3 class="text-base font-bold flex-grow mb-2">
+                                <a href="#" class="hover:text-orange-primary">Rèm ngăn cháy cho nhà xưởng</a>
+                            </h3>
+                            <p class="text-orange-primary font-bold mb-4">Liên hệ</p>
+                            <a href="#" class="block w-full bg-orange-primary text-white text-center py-2 rounded-md hover:bg-orange-secondary transition-colors font-semibold text-sm">Thêm vào giỏ</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide h-auto">
+                    <div class="group bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full">
+                        <a href="#" class="block overflow-hidden aspect-square">
+                            <img src="./z6903656809724_3f24807b722a0ab473f7219a4e8f6f3b.jpg" alt="Rèm ngăn cháy cho tầng hầm" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        </a>
+                        <div class="p-4 flex flex-col flex-grow text-left">
+                            <h3 class="text-base font-bold flex-grow mb-2">
+                                <a href="#" class="hover:text-orange-primary">Rèm ngăn cháy cho tầng hầm</a>
+                            </h3>
+                            <p class="text-orange-primary font-bold mb-4">Liên hệ</p>
+                            <a href="#" class="block w-full bg-orange-primary text-white text-center py-2 rounded-md hover:bg-orange-secondary transition-colors font-semibold text-sm">Thêm vào giỏ</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-button-next text-gray-600"></div>
+            <div class="swiper-button-prev text-gray-600"></div>
+        </div>
+    </div>
+</section>
+            <!-- Giay chung nhan-->
+
+<section class="relative bg-gray-800 text-gray-200 flex items-center h-[50vh] md:h-[49vh]">
+
+    <div class="absolute inset-0 z-0">
+        <img src="./giay chung nhan.jpg" alt="Background" class="w-full h-full object-cover opacity-10">
+        <div class="absolute inset-0 bg-gray-900/80"></div>
+    </div>
+
+    <div class="ux-shape-divider--top" style="z-index: 1; transform: rotate(180deg);">
+        <svg viewBox="0 0 1000 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path class="ux-shape-fill" style="fill: #f9fafb;" d="M1000 100H0L0 96H480.929C482.255 96 483.527 95.4732 484.464 94.5355L497.879 81.1213C499.05 79.9497 500.95 79.9497 502.121 81.1213L515.536 94.5355C516.473 95.4732 517.745 96 519.071 96H1000V100Z"></path>
+        </svg>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10 max-w-[900px] py-32 md:py-0">
+        <div class="grid md:grid-cols-2 gap-32 items-center">
+            
+            <div>
+                <img src="./giay chung nhan.jpg" alt="Chứng nhận chất lượng XNK 899" class="rounded-lg shadow-xl w-full">
+            </div>
+
+            <div>
+                <h2 class="text-3xl lg:text-4xl font-bold text-white mb-12 uppercase section-title">Thế mạnh của chúng tôi</h2>
+
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <i class="fa-solid fa-award text-orange-primary text-3xl w-8 text-center"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-white mb-1">CHẤT LƯỢNG HÀNG ĐẦU</h3>
+                            <p class="text-gray-400">Sản phẩm nhập khẩu chính ngạch, có đầy đủ chứng nhận chất lượng theo tiêu chuẩn PCCC Việt Nam.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <i class="fa-solid fa-handshake text-orange-primary text-3xl w-8 text-center"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-white mb-1">UY TÍN – CHUYÊN NGHIỆP</h3>
+                            <p class="text-gray-400">Luôn đặt chữ TÍN lên hàng đầu, với đội ngũ nhân sự chuyên nghiệp và tận tâm.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <i class="fa-solid fa-tags text-orange-primary text-3xl w-8 text-center"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-white mb-1">GIÁ THÀNH CẠNH TRANH</h3>
+                            <p class="text-gray-400">Mang đến giải pháp PCCC tối ưu với mức giá tốt nhất trên thị trường.</p>
+                        </div>
+                    </div>
+                     <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <i class="fa-solid fa-headset text-orange-primary text-3xl w-8 text-center"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-white mb-1">HỖ TRỢ 24/7</h3>
+                            <p class="text-gray-400">Sẵn sàng tư vấn, giải đáp mọi thắc mắc của khách hàng một cách nhanh chóng và hiệu quả.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <div class="ux-shape-divider--bottom" style="z-index: 1;">
+        <svg viewBox="0 0 1000 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path class="ux-shape-fill" style="fill: #f9fafb;" d="M1000 100H0L0 96H480.929C482.255 96 483.527 95.4732 484.464 94.5355L497.879 81.1213C499.05 79.9497 500.95 79.9497 502.121 81.1213L515.536 94.5355C516.473 95.4732 517.745 96 519.071 96H1000V100Z"></path>
+        </svg>
+    </div>
+</section>
             <!-- 4. PROJECTS -->
             <section class="py-16 lg:py-24">
                 <div class="container mx-auto px-4">
