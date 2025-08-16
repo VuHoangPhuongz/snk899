@@ -3,30 +3,41 @@ const mainNavLinks = document.querySelectorAll('.main-nav-link');
 const pageContents = document.querySelectorAll('.page-content');
 
 function showPage(targetId) {
+    // Hide all content pages
     pageContents.forEach(page => page.classList.remove('active'));
+    
+    // Show the target page
     const targetPage = document.getElementById(targetId);
     if (targetPage) {
         targetPage.classList.add('active');
     }
 
+    // Update active state for navigation links
     mainNavLinks.forEach(nav => nav.classList.remove('active'));
     document.querySelectorAll(`.main-nav-link[href="#${targetId}"]`).forEach(activeLink => {
         activeLink.classList.add('active');
     });
     
-    // Special handling for "Giới thiệu" dropdown parent
+    // Special handling for "Giới thiệu" dropdown parent to keep it active
     if (targetId.startsWith('gioithieu') || targetId.startsWith('hosonangluc') || targetId.startsWith('cosovatchat') || targetId.startsWith('chinhsach')) {
-         document.querySelector('a.main-nav-link[href="#gioithieu-page"]').classList.add('active');
+         const introParentLink = document.querySelector('a.main-nav-link[href="#gioithieu-page"]');
+         if(introParentLink) {
+            introParentLink.classList.add('active');
+         }
     }
 
+    // Scroll to the top of the page after navigation
     window.scrollTo(0, 0);
 }
 
 mainNavLinks.forEach(link => {
     link.addEventListener('click', (event) => {
-        event.preventDefault();
-        const targetId = link.getAttribute('href').substring(1);
-        showPage(targetId);
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('#')) {
+            event.preventDefault();
+            const targetId = href.substring(1);
+            showPage(targetId);
+        }
     });
 });
 
@@ -37,6 +48,7 @@ if (mobileMenuButton && mobileMenu) {
     mobileMenuButton.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
     });
+    // Hide menu when a link is clicked
     mobileMenu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             mobileMenu.classList.add('hidden');
@@ -44,30 +56,18 @@ if (mobileMenuButton && mobileMenu) {
     });
 }
 
-
-// --- HERO SLIDER ---
+// --- SWIPER SLIDERS ---
+// Hero Slider
 const heroSlider = new Swiper('.hero-slider', {
     loop: true,
-    autoplay: { delay: 5000 },
+    autoplay: { delay: 3000 },
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
 });
 
-// --- PROJECT SLIDER ---
-const projectSlider = new Swiper('.project-slider', {
-    loop: true,
-    slidesPerView: 1,
-    spaceBetween: 20,
-    pagination: { el: '.swiper-pagination', clickable: true },
-    breakpoints: {
-        640: { slidesPerView: 2, spaceBetween: 20 },
-        1024: { slidesPerView: 3, spaceBetween: 30 },
-    }
-});
-
-// --- FEATURED PRODUCT SLIDER ---
+// Featured Product Slider
 const featuredProductSlider = new Swiper('.featured-product-slider', {
     loop: true,
     slidesPerView: 2,
@@ -86,4 +86,33 @@ const featuredProductSlider = new Swiper('.featured-product-slider', {
             spaceBetween: 30,
         },
     }
+});
+
+// Partner Logos Slider
+const partnerSlider = new Swiper('.partner-slider', {
+    loop: true,
+    grabCursor: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        640: {
+            slidesPerView: 3,
+            spaceBetween: 30
+        },
+        1024: {
+            slidesPerView: 5,
+            spaceBetween: 40
+        }
+    }
+});
+
+// Initialize the default page view on load
+document.addEventListener('DOMContentLoaded', () => {
+    showPage('homepage');
 });

@@ -2,46 +2,81 @@ body {
     font-family: 'Roboto', sans-serif;
     color: #333;
 }
-.text-orange-primary {
-    color: #f36f21;
+
+/* Xanh lá chính */
+.text-green-primary {
+    color: #2ca84c;
 }
-.bg-orange-primary {
-    background-color: #f36f21;
+
+.bg-green-primary {
+    background-color: #2ca84c;
 }
-.hover\:bg-orange-secondary:hover {
-    background-color: #e06017;
+
+.hover\:bg-green-secondary:hover {
+    background-color: #238b3d;
 }
-.border-orange-primary {
-    border-color: #f36f21;
+
+.border-green-primary {
+    border-color: #2ca84c;
 }
-.group:hover .group-hover-text-orange {
-    color: #f36f21;
+
+.group:hover .group-hover-text-green {
+    color: #2ca84c;
 }
+
+/* Xanh lam chính */
+.text-blue-primary {
+    color: #004d80;
+}
+
+.bg-blue-primary {
+    background-color: #004d80;
+}
+
+.hover\:bg-blue-secondary:hover {
+    background-color: #00375c;
+}
+
+.border-blue-primary {
+    border-color: #004d80;
+}
+
+.group:hover .group-hover-text-blue {
+    color: #004d80;
+}
+
+/* Title line */
 .section-title::after {
     content: '';
     display: block;
     width: 60px;
     height: 3px;
-    background-color: #f36f21;
+    background: linear-gradient(90deg, #2ca84c, #004d80);
     margin: 8px auto 0;
 }
+
 /* Styles for page navigation */
 .page-content {
     display: none;
 }
+
 .page-content.active {
     display: block;
 }
+
 /* Styles for active nav links */
 .main-nav-link.active {
-    color: #f36f21;
+    color: #2ca84c;
     font-weight: 700;
 }
+
 .sidebar-link.active {
-    background-color: #f36f21;
+    background-color: #004d80;
     color: white;
-    border-right: 4px solid #c25413;
+    border-right: 4px solid #2ca84c;
 }
+
+/* Shape Dividers */
 .ux-shape-divider--top {
     position: absolute;
     top: 0;
@@ -51,12 +86,23 @@ body {
     line-height: 0;
     transform: rotate(180deg);
 }
+
 .ux-shape-divider--top svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
     height: 50px;
 }
+
 .ux-shape-fill {
     fill: #FFFFFF;
+}
+
+.contact-section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #2ca84c, #004d80);
+    margin-top: 8px;
 }
