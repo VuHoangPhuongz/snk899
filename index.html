@@ -13,7 +13,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
     <style>
-<style>
     /* =========================
        Font & Base
     ========================= */
@@ -198,7 +197,7 @@
     <!-- Bên trái: số điện thoại -->
     <div class="flex items-center space-x-2">
       <i class="fas fa-phone-alt"></i>
-      <span>0342 699 888</span>
+      <span>0987.811.158</span>
     </div>
     
     <!-- Ở giữa: thông điệp -->
@@ -944,7 +943,7 @@
                                     <textarea name="message" id="message" rows="6" class="w-full p-3 border border-gray-300 rounded-md focus:ring-orange-primary focus:border-orange-primary" placeholder="Nội dung yêu cầu (*)"></textarea>
                                 </div>
                                 <div>
-                                    <button type="submit" class="w-full bg-orange-primary text-white font-bold uppercase py-3 px-6 rounded-md hover:bg-orange-secondary transition duration-300">
+                                    <button type="submit" class="w-full bg-gradient-to-r from-blue-800 via-green-600 to-white text-white font-bold uppercase py-3 px-6 rounded-md hover:bg-orange-secondary transition duration-300">
                                         Gửi đi
                                     </button>
                                 </div>
@@ -1131,110 +1130,349 @@
             <!-- =================================================================== -->
         <!-- ======================= SẢN PHẨM PAGE ============================= -->
         <!-- =================================================================== -->
-        <div id="sanpham-page" class="page-content">
-            <!-- Banner -->
-            <section class="relative bg-gray-800 text-white py-20">
-                <img src="./Marriott Đà Nẵng.jpg" class="absolute inset-0 w-full h-full object-cover opacity-30">
-                <div class="container mx-auto px-4 relative z-10 text-center">
-                    <h1 class="text-4xl md:text-5xl font-bold uppercase">Sản Phẩm</h1>
-                    <div class="mt-4 text-sm">
-                        <a href="#homepage" class="main-nav-link hover:text-orange-primary">Trang chủ</a><span class="mx-2">/</span><span>Sản phẩm</span>
+<div id="sanpham-page" class="page-content">
+    <section class="relative bg-gray-800 text-white py-20">
+        <img src="./Marriott Đà Nẵng.jpg" class="absolute inset-0 w-full h-full object-cover opacity-30">
+        <div class="container mx-auto px-4 relative z-10 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold uppercase">Sản Phẩm</h1>
+            <div class="mt-4 text-sm">
+                <a href="#homepage" class="main-nav-link hover:text-green-primary">Trang chủ</a><span class="mx-2">/</span><span>Sản phẩm</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 lg:py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-4 gap-8 lg:gap-12">
+                <aside class="lg:col-span-1">
+                    <div class="bg-white rounded-lg shadow-md sticky top-28">
+                        <h3 class="text-xl font-bold mb-4 p-3 bg-blue-primary text-white rounded-t-lg">Danh Mục Sản Phẩm</h3>
+                        <ul class="space-y-1 p-4">
+                            <li><a href="#" class="block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-blue-primary hover:text-white transition-colors">Rèm/Màn cuốn ngăn cháy</a></li>
+                            <li><a href="#" class="block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-blue-primary hover:text-white transition-colors">Tấm MGO chống cháy</a></li>
+                            <li><a href="#" class="block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-blue-primary hover:text-white transition-colors">Tấm Panel chống cháy</a></li>
+                            <li><a href="#" class="block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-blue-primary hover:text-white transition-colors">Keo chống cháy</a></li>
+                            <li><a href="#" class="block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-blue-primary hover:text-white transition-colors">Ron chống cháy</a></li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <div class="lg:col-span-3">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
+                        
+                        <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center flex flex-col h-full">
+                            <div class="overflow-hidden"><img src="./man ngan chay 1 lop.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <h3 class="text-base font-bold group-hover-text-green transition-colors flex-grow">
+                                    <a href="#chitietsanpham-page" class="main-nav-link" data-product-id="rem-1-lop">Rèm/ màn ngăn cháy 1 lớp</a>
+                                </h3>
+                                <p class="text-green-primary font-bold my-2 text-lg">Liên hệ</p>
+                                <a href="#chitietsanpham-page" class="main-nav-link mt-auto bg-gradient-to-r from-blue-800 via-green-600 to-white text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-green-primary transition-colors" data-product-id="rem-1-lop">Xem chi tiết</a>
+                            </div>
+                        </div>
+                        <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center flex flex-col h-full">
+                            <div class="overflow-hidden"><img src="./ie 90.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <h3 class="text-base font-bold group-hover-text-green transition-colors flex-grow">
+                                    <a href="#chitietsanpham-page" class="main-nav-link" data-product-id="rem-ei-90">Rèm/ màn ngăn cháy EI 90 phút</a>
+                                </h3>
+                                <p class="text-green-primary font-bold my-2 text-lg">Liên hệ</p>
+                                <a href="#chitietsanpham-page" class="main-nav-link mt-auto bg-gradient-to-r from-blue-800 via-green-600 to-white text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-green-primary transition-colors" data-product-id="rem-ei-90">Xem chi tiết</a>
+                            </div>
+                        </div>
+                        <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center flex flex-col h-full">
+                            <div class="overflow-hidden"><img src="./ie 60 test.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <h3 class="text-base font-bold group-hover-text-green transition-colors flex-grow">
+                                    <a href="#chitietsanpham-page" class="main-nav-link" data-product-id="rem-ei-60">Rèm/ màn ngăn cháy EI 60 phút</a>
+                                </h3>
+                                <p class="text-green-primary font-bold my-2 text-lg">Liên hệ</p>
+                                <a href="#chitietsanpham-page" class="main-nav-link mt-auto bg-gradient-to-r from-blue-800 via-green-600 to-white text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-green-primary transition-colors" data-product-id="rem-ei-60">Xem chi tiết</a>
+                            </div>
+                        </div>
+                        <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center flex flex-col h-full">
+                            <div class="overflow-hidden"><img src="./mgo 10mm.png" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <h3 class="text-base font-bold group-hover-text-green transition-colors flex-grow">
+                                    <a href="#chitietsanpham-page" class="main-nav-link" data-product-id="tam-mgo-10mm">Tấm Eron - MGO 10mm cách nhiệt</a>
+                                </h3>
+                                <p class="text-green-primary font-bold my-2 text-lg">Liên hệ</p>
+                                <a href="#chitietsanpham-page" class="main-nav-link mt-auto bg-gradient-to-r from-blue-800 via-green-600 to-white text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-green-primary transition-colors" data-product-id="tam-mgo-10mm">Xem chi tiết</a>
+                            </div>
+                        </div>
+                        <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center flex flex-col h-full">
+                            <div class="overflow-hidden"><img src="./mgo eron.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <h3 class="text-base font-bold group-hover-text-green transition-colors flex-grow">
+                                    <a href="#chitietsanpham-page" class="main-nav-link" data-product-id="tam-mgo-5mm">Tấm MGO-Eron chống cháy 5mm</a>
+                                </h3>
+                                <p class="text-green-primary font-bold my-2 text-lg">Liên hệ</p>
+                                <a href="#chitietsanpham-page" class="main-nav-link mt-auto bg-gradient-to-r from-blue-800 via-green-600 to-white text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-green-primary transition-colors" data-product-id="tam-mgo-5mm">Xem chi tiết</a>
+                            </div>
+                        </div>
+                        <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center flex flex-col h-full">
+                            <div class="overflow-hidden"><img src="./tam chong chay.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <h3 class="text-base font-bold group-hover-text-green transition-colors flex-grow">
+                                    <a href="#chitietsanpham-page" class="main-nav-link" data-product-id="tam-mgo-tong-hop">Tấm chống cháy MGO</a>
+                                </h3>
+                                <p class="text-green-primary font-bold my-2 text-lg">Liên hệ</p>
+                                <a href="#chitietsanpham-page" class="main-nav-link mt-auto bg-gradient-to-r from-blue-800 via-green-600 to-white text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-green-primary transition-colors" data-product-id="tam-mgo-tong-hop">Xem chi tiết</a>
+                            </div>
+                        </div>
+                        <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center flex flex-col h-full">
+                            <div class="overflow-hidden"><img src="./panel-loi-xop-thuong-day-10-cm_300x300.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <h3 class="text-base font-bold group-hover-text-green transition-colors flex-grow">
+                                    <a href="#chitietsanpham-page" class="main-nav-link" data-product-id="panel-xop-10cm">PANEL LÕI XỐP DÀY 10 CM</a>
+                                </h3>
+                                <p class="text-green-primary font-bold my-2 text-lg">Liên hệ</p>
+                                <a href="#chitietsanpham-page" class="main-nav-link mt-auto bg-gradient-to-r from-blue-800 via-green-600 to-white text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-green-primary transition-colors" data-product-id="panel-xop-10cm">Xem chi tiết</a>
+                            </div>
+                        </div>
+                        <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center flex flex-col h-full">
+                            <div class="overflow-hidden"><img src="./panel-loi-bong-khoang-day-100-mm_300x300.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <h3 class="text-base font-bold group-hover-text-green transition-colors flex-grow">
+                                    <a href="#chitietsanpham-page" class="main-nav-link" data-product-id="panel-bong-khoang-100mm">PANEL LÕI BÔNG KHOÁNG DÀY 100 MM</a>
+                                </h3>
+                                <p class="text-green-primary font-bold my-2 text-lg">Liên hệ</p>
+                                <a href="#chitietsanpham-page" class="main-nav-link mt-auto bg-gradient-to-r from-blue-800 via-green-600 to-white text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-green-primary transition-colors" data-product-id="panel-bong-khoang-100mm">Xem chi tiết</a>
+                            </div>
+                        </div>
+                        <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center flex flex-col h-full">
+                            <div class="overflow-hidden"><img src="./panel-mai-loi-bong-khoang-rockwool_300x300.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <h3 class="text-base font-bold group-hover-text-green transition-colors flex-grow">
+                                    <a href="#chitietsanpham-page" class="main-nav-link" data-product-id="panel-mai-rockwool">PANEL MÁI LÕI BÔNG KHOÁNG</a>
+                                </h3>
+                                <p class="text-green-primary font-bold my-2 text-lg">Liên hệ</p>
+                                <a href="#chitietsanpham-page" class="main-nav-link mt-auto bg-gradient-to-r from-blue-800 via-green-600 to-white text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-green-primary transition-colors" data-product-id="panel-mai-rockwool">Xem chi tiết</a>
+                            </div>
+                        </div>
+                        <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center flex flex-col h-full">
+                            <div class="overflow-hidden"><img src="./keo f200.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <h3 class="text-base font-bold group-hover-text-green transition-colors flex-grow">
+                                    <a href="#chitietsanpham-page" class="main-nav-link" data-product-id="keo-f200">Keo Silicone Topseal F200</a>
+                                </h3>
+                                <p class="text-green-primary font-bold my-2 text-lg">Liên hệ</p>
+                                <a href="#chitietsanpham-page" class="main-nav-link mt-auto bg-gradient-to-r from-blue-800 via-green-600 to-white text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-green-primary transition-colors" data-product-id="keo-f200">Xem chi tiết</a>
+                            </div>
+                        </div>
+                        <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center flex flex-col h-full">
+                            <div class="overflow-hidden"><img src="./keo m1.png" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <h3 class="text-base font-bold group-hover-text-green transition-colors flex-grow">
+                                    <a href="#chitietsanpham-page" class="main-nav-link" data-product-id="keo-m1">Keo Fixacryl M1 Grey</a>
+                                </h3>
+                                <p class="text-green-primary font-bold my-2 text-lg">Liên hệ</p>
+                                <a href="#chitietsanpham-page" class="main-nav-link mt-auto bg-gradient-to-r from-blue-800 via-green-600 to-white text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-green-primary transition-colors" data-product-id="keo-m1">Xem chi tiết</a>
+                            </div>
+                        </div>
+                        <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center flex flex-col h-full">
+                            <div class="overflow-hidden"><img src="./keo m1c.png" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <h3 class="text-base font-bold group-hover-text-green transition-colors flex-grow">
+                                    <a href="#chitietsanpham-page" class="main-nav-link" data-product-id="keo-m1c">KEO SELSIL M1C</a>
+                                </h3>
+                                <p class="text-green-primary font-bold my-2 text-lg">Liên hệ</p>
+                                <a href="#chitietsanpham-page" class="main-nav-link mt-auto bg-gradient-to-r from-blue-800 via-green-600 to-white text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-green-primary transition-colors" data-product-id="keo-m1c">Xem chi tiết</a>
+                            </div>
+                        </div>
+                        <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center flex flex-col h-full">
+                            <div class="overflow-hidden"><img src="./ron-chong-chay-cua-thep_300x300.png" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <h3 class="text-base font-bold group-hover-text-green transition-colors flex-grow">
+                                    <a href="#chitietsanpham-page" class="main-nav-link" data-product-id="ron-cua-thep">Ron chống cháy cửa thép</a>
+                                </h3>
+                                <p class="text-green-primary font-bold my-2 text-lg">Liên hệ</p>
+                                <a href="#chitietsanpham-page" class="main-nav-link mt-auto bg-gradient-to-r from-blue-800 via-green-600 to-white text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-green-primary transition-colors" data-product-id="ron-cua-thep">Xem chi tiết</a>
+                            </div>
+                        </div>
+                        <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center flex flex-col h-full">
+                            <div class="overflow-hidden"><img src="./ron-chong-chay-thanh_300x300.png" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <h3 class="text-base font-bold group-hover-text-green transition-colors flex-grow">
+                                    <a href="#chitietsanpham-page" class="main-nav-link" data-product-id="ron-thanh">Ron chống cháy thanh</a>
+                                </h3>
+                                <p class="text-green-primary font-bold my-2 text-lg">Liên hệ</p>
+                                <a href="#chitietsanpham-page" class="main-nav-link mt-auto bg-gradient-to-r from-blue-800 via-green-600 to-white text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-green-primary transition-colors" data-product-id="ron-thanh">Xem chi tiết</a>
+                            </div>
+                        </div>
+                        <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center flex flex-col h-full">
+                            <div class="overflow-hidden"><img src="./ron-chong-chay-mem_300x300.png" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <h3 class="text-base font-bold group-hover-text-green transition-colors flex-grow">
+                                    <a href="#chitietsanpham-page" class="main-nav-link" data-product-id="ron-mem">Ron chống cháy mềm</a>
+                                </h3>
+                                <p class="text-green-primary font-bold my-2 text-lg">Liên hệ</p>
+                                <a href="#chitietsanpham-page" class="main-nav-link mt-auto bg-gradient-to-r from-blue-800 via-green-600 to-white text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-green-primary transition-colors" data-product-id="ron-mem">Xem chi tiết</a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-            </section>
+            </div>
+        </div>
+    </section>
+</div>
+<div id="chitietsanpham-page" class="page-content">
+    <section class="relative bg-gray-800 text-white py-20">
+        <img src="./Marriott Đà Nẵng.jpg" class="absolute inset-0 w-full h-full object-cover opacity-30">
+        <div class="container mx-auto px-4 relative z-10 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold uppercase">Chi Tiết Sản Phẩm</h1>
+        </div>
+    </section>
 
-            <!-- Main Content -->
-            <section class="py-16 lg:py-20 bg-gray-50">
-                <div class="container mx-auto px-4">
-                    <div class="grid lg:grid-cols-4 gap-8 lg:gap-12">
-                        <!-- LEFT SIDEBAR -->
-                        <aside class="lg:col-span-1">
-                            <div class="bg-white rounded-lg shadow-md p-4 sticky top-28">
-                                <h3 class="text-xl font-bold mb-4 pb-2 border-b-2 bg-gradient-to-r from-blue-800 via-green-600 to-white text-white border-orange-primary">Danh Mục Sản Phẩm</h3>
-                                <ul class="space-y-1">
-                                    <li><a href="#" class="block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-orange-primary hover:text-white transition-colors">Rèm/Màn cuốn ngăn cháy</a></li>
-                                    <li><a href="#" class="block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-orange-primary hover:text-white transition-colors">Tấm MGO chống cháy</a></li>
-                                    <li><a href="#" class="block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-orange-primary hover:text-white transition-colors">Tấm Panel chống cháy</a></li>
-                                    <li><a href="#" class="block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-orange-primary hover:text-white transition-colors">Keo chống cháy</a></li>
-                                    <li><a href="#" class="block w-full text-left px-4 py-3 rounded-md font-semibold hover:bg-orange-primary hover:text-white transition-colors">Ron chống cháy</a></li>
-                                </ul>
+    <section class="py-12 lg:py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <nav class="text-sm mb-8" id="product-breadcrumb">
+                <a href="#homepage" class="main-nav-link text-gray-500 hover:text-green-primary">Trang chủ</a>
+                <span class="mx-2 text-gray-400">/</span>
+                <a href="#sanpham-page" class="main-nav-link text-gray-500 hover:text-green-primary">Sản phẩm</a>
+                <span class="mx-2 text-gray-400">/</span>
+                <span class="text-gray-800 font-semibold" id="breadcrumb-product-name">Tên sản phẩm</span>
+            </nav>
+
+            <div class="grid lg:grid-cols-4 gap-8 lg:gap-12">
+
+                <div class="lg:col-span-3">
+                    <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                        <div>
+                            <div class="border rounded-lg shadow-md p-2 mb-4">
+                                <img id="product-detail-image" src="./placeholder.jpg" alt="Tên sản phẩm" class="w-full h-auto rounded-md object-cover">
                             </div>
-                        </aside>
+                            <div class="grid grid-cols-4 gap-2" id="product-thumbnail-gallery">
+                                </div>
+                        </div>
 
-                        <!-- RIGHT CONTENT -->
-                        <div class="lg:col-span-3">
-                            <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
-                                <!-- Rèm/Màn Ngăn Cháy -->
-                                <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center flex flex-col h-full">
-                                    <div class="overflow-hidden"><img src="./man ngan chay 1 lop.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
-                                    <div class="p-4 flex flex-col flex-grow"><h3 class="text-base font-bold group-hover-text-orange transition-colors flex-grow"><a href="#">Rèm/ màn ngăn cháy 1 lớp</a></h3><p class="text-orange-primary font-bold my-2 text-lg">Liên hệ</p><a href="#" class="mt-auto bg-gradient-to-r from-blue-800 via-green-600 to-white text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-orange-primary transition-colors">Xem chi tiết</a></div>
+                        <div class="prose max-w-none">
+                            <h1 class="text-3xl lg:text-4xl font-bold text-blue-primary" id="product-detail-title">Tên sản phẩm</h1>
+                            <p class="text-2xl font-bold text-green-primary my-4">Giá: <a href="tel:0987811158" class="hover:underline">Liên hệ</a></p>
+                            
+                            <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-green-primary" id="product-detail-short-desc">
                                 </div>
-                                <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center flex flex-col h-full">
-                                    <div class="overflow-hidden"><img src="./ie 90.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
-                                    <div class="p-4 flex flex-col flex-grow"><h3 class="text-base font-bold group-hover-text-orange transition-colors flex-grow"><a href="#">Rèm/ màn ngăn cháy EI 90 phút</a></h3><p class="text-orange-primary font-bold my-2 text-lg">Liên hệ</p><a href="#" class="mt-auto bg-gradient-to-r from-blue-800 via-green-600 to-white text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-orange-primary transition-colors">Xem chi tiết</a></div>
+
+                            <div class="flex flex-col sm:flex-row gap-4 mt-6">
+                                <a href="tel:0987811158" class="flex-1 text-center bg-green-primary text-white px-6 py-3 rounded-md font-bold uppercase hover:bg-blue-primary transition-colors">
+                                    <i class="fa-solid fa-phone-volume mr-2"></i> Yêu Cầu Báo Giá
+                                </a>
+                                <a href="https://zalo.me/0987811158" target="_blank" class="flex-1 text-center border-2 border-blue-primary text-blue-primary px-6 py-3 rounded-md font-bold uppercase hover:bg-blue-primary hover:text-white transition-colors">
+                                    <i class="fa-solid fa-comments mr-2"></i> Tư Vấn Zalo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-16">
+                        <div class="border-b border-gray-200">
+                            <nav class="flex space-x-6 -mb-px" id="product-tabs">
+                                <button data-tab="description" class="tab-button active font-bold py-4 px-1 border-b-2 border-green-primary text-green-primary">Mô tả chi tiết</button>
+                                <button data-tab="specs" class="tab-button text-gray-500 font-bold py-4 px-1 border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700">Thông số kỹ thuật</button>
+                            </nav>
+                        </div>
+                        <div class="py-6 prose max-w-none">
+                            <div id="description" class="tab-content active text-gray-600">
                                 </div>
-                                <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center flex flex-col h-full">
-                                    <div class="overflow-hidden"><img src="./ie 60 test.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
-                                    <div class="p-4 flex flex-col flex-grow"><h3 class="text-base font-bold group-hover-text-orange transition-colors flex-grow"><a href="#">Rèm/ màn ngăn cháy EI 60 phút</a></h3><p class="text-orange-primary font-bold my-2 text-lg">Liên hệ</p><a href="#" class="mt-auto bg-gradient-to-r from-blue-800 via-green-600 to-white text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-orange-primary transition-colors">Xem chi tiết</a></div>
-                                </div>
-                                <!-- Tấm MGO -->
-                                <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center flex flex-col h-full">
-                                    <div class="overflow-hidden"><img src="./mgo 10mm.png" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
-                                    <div class="p-4 flex flex-col flex-grow"><h3 class="text-base font-bold group-hover-text-orange transition-colors flex-grow"><a href="#">Tấm Eron - MGO 10mm cách nhiệt</a></h3><p class="text-orange-primary font-bold my-2 text-lg">Liên hệ</p><a href="#" class="mt-auto bg-gradient-to-r from-blue-800 via-green-600 to-white text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-orange-primary transition-colors">Xem chi tiết</a></div>
-                                </div>
-                                <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center flex flex-col h-full">
-                                    <div class="overflow-hidden"><img src="./mgo eron.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
-                                    <div class="p-4 flex flex-col flex-grow"><h3 class="text-base font-bold group-hover-text-orange transition-colors flex-grow"><a href="#">Tấm MGO-Eron chống cháy 5mm</a></h3><p class="text-orange-primary font-bold my-2 text-lg">Liên hệ</p><a href="#" class="mt-auto bg-gradient-to-r from-blue-800 via-green-600 to-white text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-orange-primary transition-colors">Xem chi tiết</a></div>
-                                </div>
-                                <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center flex flex-col h-full">
-                                    <div class="overflow-hidden"><img src="./tam chong chay.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
-                                    <div class="p-4 flex flex-col flex-grow"><h3 class="text-base font-bold group-hover-text-orange transition-colors flex-grow"><a href="#">Tấm chống cháy MGO</a></h3><p class="text-orange-primary font-bold my-2 text-lg">Liên hệ</p><a href="#" class="mt-auto bg-gradient-to-r from-blue-800 via-green-600 to-white text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-orange-primary transition-colors">Xem chi tiết</a></div>
-                                </div>
-                                <!-- Tấm Panel -->
-                                <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center flex flex-col h-full">
-                                    <div class="overflow-hidden"><img src="./panel-loi-xop-thuong-day-10-cm_300x300.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
-                                    <div class="p-4 flex flex-col flex-grow"><h3 class="text-base font-bold group-hover-text-orange transition-colors flex-grow"><a href="#">PANEL LÕI XỐP THƯỜNG DÀY 10 CM</a></h3><p class="text-orange-primary  font-bold my-2 text-lg">Liên hệ</p><a href="#" class="mt-auto bg-gradient-to-r from-blue-800 via-green-600 to-white text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-orange-primary transition-colors">Xem chi tiết</a></div>
-                                </div>
-                                <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center flex flex-col h-full">
-                                    <div class="overflow-hidden"><img src="./panel-loi-bong-khoang-day-100-mm_300x300.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
-                                    <div class="p-4 flex flex-col flex-grow"><h3 class="text-base font-bold group-hover-text-orange transition-colors flex-grow"><a href="#">PANEL LÕI BÔNG KHOÁNG DÀY 100 MM</a></h3><p class="text-orange-primary font-bold my-2 text-lg">Liên hệ</p><a href="#" class="mt-auto bg-gradient-to-r from-blue-800 via-green-600 to-white text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-orange-primary transition-colors">Xem chi tiết</a></div>
-                                </div>
-                                <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center flex flex-col h-full">
-                                    <div class="overflow-hidden"><img src="./panel-mai-loi-bong-khoang-rockwool_300x300.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
-                                    <div class="p-4 flex flex-col flex-grow"><h3 class="text-base font-bold group-hover-text-orange transition-colors flex-grow"><a href="#">PANEL MÁI LÕI BÔNG KHOÁNG (ROCKWOOL)</a></h3><p class="text-orange-primary font-bold my-2 text-lg">Liên hệ</p><a href="#" class="mt-auto bg-gradient-to-r from-blue-800 via-green-600 to-white text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-orange-primary transition-colors">Xem chi tiết</a></div>
-                                </div>
-                                <!-- Keo Chống Cháy -->
-                                <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center flex flex-col h-full">
-                                    <div class="overflow-hidden"><img src="./keo f200.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
-                                    <div class="p-4 flex flex-col flex-grow"><h3 class="text-base font-bold group-hover-text-orange transition-colors flex-grow"><a href="#">Keo Silicone chống cháy Ssangkom Topseal F200</a></h3><p class="text-orange-primary font-bold my-2 text-lg">Liên hệ</p><a href="#" class="mt-auto bg-gradient-to-r from-blue-800 via-green-600 to-white text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-orange-primary transition-colors">Xem chi tiết</a></div>
-                                </div>
-                                <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center flex flex-col h-full">
-                                    <div class="overflow-hidden"><img src="./keo m1.png" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
-                                    <div class="p-4 flex flex-col flex-grow"><h3 class="text-base font-bold group-hover-text-orange transition-colors flex-grow"><a href="#">Keo silicone chống cháy Fixacryl M1 Grey 300 ml</a></h3><p class="text-orange-primary font-bold my-2 text-lg">Liên hệ</p><a href="#" class="mt-auto bg-gradient-to-r from-blue-800 via-green-600 to-white text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-orange-primary transition-colors">Xem chi tiết</a></div>
-                                </div>
-                                <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center flex flex-col h-full">
-                                    <div class="overflow-hidden"><img src="./keo m1c.png" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
-                                    <div class="p-4 flex flex-col flex-grow"><h3 class="text-base font-bold group-hover-text-orange transition-colors flex-grow"><a href="#">KEO SILICONE CHỐNG CHÁY LAN SELSIL M1C</a></h3><p class="text-orange-primary font-bold my-2 text-lg">Liên hệ</p><a href="#" class="mt-auto bg-gradient-to-r from-blue-800 via-green-600 to-white text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-orange-primary transition-colors">Xem chi tiết</a></div>
-                                </div>
-                                <!-- Ron Chống Cháy -->
-                                <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center flex flex-col h-full">
-                                    <div class="overflow-hidden"><img src="./ron-chong-chay-cua-thep_300x300.png" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
-                                    <div class="p-4 flex flex-col flex-grow"><h3 class="text-base font-bold group-hover-text-orange transition-colors flex-grow"><a href="#">Ron chống cháy cửa thép</a></h3><p class="text-orange-primary font-bold my-2 text-lg">Liên hệ</p><a href="#" class="mt-auto bg-gradient-to-r from-blue-800 via-green-600 to-white text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-orange-primary transition-colors">Xem chi tiết</a></div>
-                                </div>
-                                <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center flex flex-col h-full">
-                                    <div class="overflow-hidden"><img src="./ron-chong-chay-thanh_300x300.png" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
-                                    <div class="p-4 flex flex-col flex-grow"><h3 class="text-base font-bold group-hover-text-orange transition-colors flex-grow"><a href="#">Ron chống cháy thanh</a></h3><p class="text-orange-primary font-bold my-2 text-lg">Liên hệ</p><a href="#" class="mt-auto bg-gradient-to-r from-blue-800 via-green-600 to-white text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-orange-primary transition-colors">Xem chi tiết</a></div>
-                                </div>
-                                <div class="group bg-white rounded-lg shadow-lg overflow-hidden text-center flex flex-col h-full">
-                                    <div class="overflow-hidden"><img src="./ron-chong-chay-mem_300x300.png" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
-                                    <div class="p-4 flex flex-col flex-grow"><h3 class="text-base font-bold group-hover-text-orange transition-colors flex-grow"><a href="#">Ron chống cháy mềm</a></h3><p class="text-orange-primary font-bold my-2 text-lg">Liên hệ</p><a href="#" class="mt-auto bg-gradient-to-r from-blue-800 via-green-600 to-white text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-orange-primary transition-colors">Xem chi tiết</a></div>
-                                </div>
+                            <div id="specs" class="tab-content hidden">
+                                <table class="w-full text-sm text-left text-gray-500">
+                                    <tbody class="divide-y" id="product-specs-table">
+                                        </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+
+                <aside class="lg:col-span-1">
+                    <div class="space-y-8 sticky top-28">
+                        <div class="bg-white rounded-lg shadow-md">
+                            <h3 class="text-lg font-bold p-4 bg-gray-100 border-b rounded-t-lg text-blue-primary">Danh mục sản phẩm</h3>
+                            <ul class="space-y-1 p-4 text-sm">
+                                <li><a href="#" class="block p-2 rounded-md font-semibold hover:bg-blue-primary hover:text-white">Cửa Thép Chống Cháy</a></li>
+                                <li><a href="#" class="block p-2 rounded-md font-semibold hover:bg-blue-primary hover:text-white">Cửa Thép Công Nghiệp</a></li>
+                                <li><a href="#" class="block p-2 rounded-md font-semibold hover:bg-blue-primary hover:text-white">Cửa Thép Vân Gỗ</a></li>
+                                <li><a href="#" class="block p-2 rounded-md font-semibold hover:bg-blue-primary hover:text-white">Vách - Cửa Kính Chống Cháy</a></li>
+                                <li><a href="#" class="block p-2 rounded-md font-semibold hover:bg-blue-primary hover:text-white">Phụ Kiện Cửa Thép</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white rounded-lg shadow-md">
+                            <h3 class="text-lg font-bold p-4 bg-gray-100 border-b rounded-t-lg text-blue-primary">Sản phẩm nổi bật</h3>
+                            <ul class="space-y-4 p-4">
+                                <li class="flex items-center space-x-3">
+                                    <a href="#chitietsanpham-page" class="main-nav-link flex-shrink-0" data-product-id="rem-ei-90">
+                                        <img src="./ie 90.jpg" class="w-16 h-16 object-cover rounded-md">
+                                    </a>
+                                    <div>
+                                        <h4 class="text-sm font-semibold leading-tight"><a href="#chitietsanpham-page" class="main-nav-link hover:text-green-primary" data-product-id="rem-ei-90">Rèm/ màn ngăn cháy EI 90 phút</a></h4>
+                                        <p class="text-sm text-green-primary font-bold">Liên hệ</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-center space-x-3">
+                                    <a href="#chitietsanpham-page" class="main-nav-link flex-shrink-0" data-product-id="panel-bong-khoang-100mm">
+                                        <img src="./panel-loi-bong-khoang-day-100-mm_300x300.jpg" class="w-16 h-16 object-cover rounded-md">
+                                    </a>
+                                    <div>
+                                        <h4 class="text-sm font-semibold leading-tight"><a href="#chitietsanpham-page" class="main-nav-link hover:text-green-primary" data-product-id="panel-bong-khoang-100mm">PANEL LÕI BÔNG KHOÁNG</a></h4>
+                                        <p class="text-sm text-green-primary font-bold">Liên hệ</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-center space-x-3">
+                                    <a href="#chitietsanpham-page" class="main-nav-link flex-shrink-0" data-product-id="tam-mgo-10mm">
+                                        <img src="./mgo 10mm.png" class="w-16 h-16 object-cover rounded-md">
+                                    </a>
+                                    <div>
+                                        <h4 class="text-sm font-semibold leading-tight"><a href="#chitietsanpham-page" class="main-nav-link hover:text-green-primary" data-product-id="tam-mgo-10mm">Tấm MGO 10mm cách nhiệt</a></h4>
+                                        <p class="text-sm text-green-primary font-bold">Liên hệ</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+
+            <div class="mt-16 border-t pt-12">
+                 <div class="text-center mb-12">
+                    <h2 class="text-3xl lg:text-4xl font-bold uppercase section-title">Sản Phẩm Tương Tự</h2>
+                </div>
+                <div class="swiper featured-product-slider">
+                    <div class="swiper-wrapper py-4">
+                        <div class="swiper-slide h-auto">
+                            <div class="group bg-white rounded-lg shadow-md overflow-hidden text-center flex flex-col h-full">
+                                <div class="overflow-hidden"><img src="./ie 90.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
+                                <div class="p-4 flex flex-col flex-grow"><h3 class="text-base font-bold group-hover-text-green transition-colors flex-grow"><a href="#chitietsanpham-page" class="main-nav-link" data-product-id="rem-ei-90">Rèm/ màn ngăn cháy EI 90 phút</a></h3><p class="text-green-primary font-bold my-2 text-lg">Liên hệ</p><a href="#chitietsanpham-page" class="main-nav-link mt-auto bg-blue-primary text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-green-primary transition-colors" data-product-id="rem-ei-90">Xem chi tiết</a></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto">
+                            <div class="group bg-white rounded-lg shadow-md overflow-hidden text-center flex flex-col h-full">
+                                <div class="overflow-hidden"><img src="./mgo 10mm.png" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
+                                <div class="p-4 flex flex-col flex-grow"><h3 class="text-base font-bold group-hover-text-green transition-colors flex-grow"><a href="#chitietsanpham-page" class="main-nav-link" data-product-id="tam-mgo-10mm">Tấm Eron - MGO 10mm cách nhiệt</a></h3><p class="text-green-primary font-bold my-2 text-lg">Liên hệ</p><a href="#chitietsanpham-page" class="main-nav-link mt-auto bg-blue-primary text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-green-primary transition-colors" data-product-id="tam-mgo-10mm">Xem chi tiết</a></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto">
+                            <div class="group bg-white rounded-lg shadow-md overflow-hidden text-center flex flex-col h-full">
+                                <div class="overflow-hidden"><img src="./panel-loi-bong-khoang-day-100-mm_300x300.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
+                                <div class="p-4 flex flex-col flex-grow"><h3 class="text-base font-bold group-hover-text-green transition-colors flex-grow"><a href="#chitietsanpham-page" class="main-nav-link" data-product-id="panel-bong-khoang-100mm">PANEL LÕI BÔNG KHOÁNG</a></h3><p class="text-green-primary font-bold my-2 text-lg">Liên hệ</p><a href="#chitietsanpham-page" class="main-nav-link mt-auto bg-blue-primary text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-green-primary transition-colors" data-product-id="panel-bong-khoang-100mm">Xem chi tiết</a></div>
+                            </div>
+                        </div>
+                         <div class="swiper-slide h-auto">
+                            <div class="group bg-white rounded-lg shadow-md overflow-hidden text-center flex flex-col h-full">
+                                <div class="overflow-hidden"><img src="./ie 60 test.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"></div>
+                                <div class="p-4 flex flex-col flex-grow"><h3 class="text-base font-bold group-hover-text-green transition-colors flex-grow"><a href="#chitietsanpham-page" class="main-nav-link" data-product-id="rem-ei-60">Rèm/ màn ngăn cháy EI 60 phút</a></h3><p class="text-green-primary font-bold my-2 text-lg">Liên hệ</p><a href="#chitietsanpham-page" class="main-nav-link mt-auto bg-blue-primary text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-green-primary transition-colors" data-product-id="rem-ei-60">Xem chi tiết</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next text-gray-600"></div>
+                    <div class="swiper-button-prev text-gray-600"></div>
+                </div>
+            </div>
         </div>
+    </section>
+</div>
     <footer class="bg-gray-800 text-gray-300">
         <div class="container mx-auto px-4 py-12">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -1295,99 +1533,7 @@
             </a>
         </div>
     </div>
-
-    <script>
-        // --- PAGE NAVIGATION LOGIC ---
-        const mainNavLinks = document.querySelectorAll('.main-nav-link');
-        const pageContents = document.querySelectorAll('.page-content');
-
-        function showPage(targetId) {
-            pageContents.forEach(page => page.classList.remove('active'));
-            const targetPage = document.getElementById(targetId);
-            if (targetPage) {
-                targetPage.classList.add('active');
-            }
-
-            mainNavLinks.forEach(nav => nav.classList.remove('active'));
-            document.querySelectorAll(`.main-nav-link[href="#${targetId}"]`).forEach(activeLink => {
-                activeLink.classList.add('active');
-            });
-            
-            // Special handling for "Giới thiệu" dropdown parent
-            if (targetId.startsWith('gioithieu') || targetId.startsWith('hosonangluc') || targetId.startsWith('cosovatchat') || targetId.startsWith('chinhsach')) {
-                 document.querySelector('a.main-nav-link[href="#gioithieu-page"]').classList.add('active');
-            }
-
-            window.scrollTo(0, 0);
-        }
-
-        mainNavLinks.forEach(link => {
-            link.addEventListener('click', (event) => {
-                event.preventDefault();
-                const targetId = link.getAttribute('href').substring(1);
-                showPage(targetId);
-            });
-        });
-
-        // --- MOBILE MENU ---
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
-            });
-        }
-
-
-        // --- HERO SLIDER ---
-        const heroSlider = new Swiper('.hero-slider', {
-            loop: true,
-            autoplay: { delay: 2000 },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-
-        // --- PROJECT SLIDER ---
-        const projectSlider = new Swiper('.project-slider', {
-            loop: true,
-            slidesPerView: 1,
-            spaceBetween: 20,
-            pagination: { el: '.swiper-pagination', clickable: true },
-            breakpoints: {
-                640: { slidesPerView: 2, spaceBetween: 20 },
-                1024: { slidesPerView: 3, spaceBetween: 30 },
-            }
-        });
-
-        // --- FEATURED PRODUCT SLIDER ---
-        const featuredProductSlider = new Swiper('.featured-product-slider', {
-            loop: true,
-            slidesPerView: 2,
-            spaceBetween: 20,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-                640: {
-                    slidesPerView: 3,
-                    spaceBetween: 20,
-                },
-                1024: {
-                    slidesPerView: 4,
-                    spaceBetween: 30,
-                },
-            }
-        });
-
-    </script>
+<script src="script.js"></script>
 
 </body>
 </html>
